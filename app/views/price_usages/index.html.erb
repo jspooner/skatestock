@@ -1,0 +1,17 @@
+<h1>Listing price_usages</h1>
+
+
+
+<table>
+	<% for price_usage in @price_usages -%>
+	<tr class="<%= cycle "odd", "even" %>">
+		<td><%= price_usage.name %></td>
+		<td><%= "$" + price_usage.price.to_s if price_usage.price %></td>
+    <td><%= link_to 'Show', price_usage_path(price_usage) %></td>
+    <td><%= link_to 'Edit', edit_price_usage_path(price_usage) %></td>
+    <td><%= link_to 'Destroy', price_usage, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>	<% end %>
+</table>
+<p>
+<%= link_to 'New Price Usage', new_price_usage_path, :class => "btn" %>
+</p>

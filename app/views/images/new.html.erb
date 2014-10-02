@@ -1,0 +1,7 @@
+
+<% if @image.owner_id == nil %>
+	<%= render :partial => 'form' %>
+<% else -%>
+	<%= render :partial => 'form_request' %>
+<% end -%>
+<%= link_to 'Back', images_path %>

@@ -1,0 +1,26 @@
+<h1>Editing price_media</h1>
+
+<% form_for(@price_media) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>
+	<p>
+		<%= f.label :is_editorial %>
+		<%= f.check_box :is_editorial %>
+	</p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', price_usages_path %>

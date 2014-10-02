@@ -1,0 +1,21 @@
+<h1>Listing images</h1>
+<%= link_to 'New image', new_image_path %>
+<table>
+  <tr>
+  </tr>
+
+<% for image in @images %>
+
+	<% div_for image, :class => "" do %>
+	 	<%= link_to(image_tag(image.public_filename(:thumb)), image)  %><br/>
+		<%= link_to 'Edit', edit_image_path(image) %><br/>
+		<%= image.product_type %><br/>
+		<% image.request.each do |r| %>
+			<%= "Pending" unless r.approved? %> <%= r.request_type %><br/>
+		<% end %>
+
+	<% end %>
+
+<% end %>
+</table>
+

@@ -1,0 +1,236 @@
+/* @override 
+*/
+/*** CSS document by Eric Maguire and Ryan Nichols for HelloGiant.com on Feb. 2009 ***/
+/**
+*
+* FULL RESET OF CERTAIN BROWSER 'defaults'
+* Take back control from the browsers.
+* 
+* Based upon 'reset.css' in the Yahoo! User Interface Library:http://developer.yahoo.com/yui and Elliot Jay Stock's reset (elliotjaystocks.com)
+*/
+*,html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h5,h5,h6,pre,form,label,fieldset,input,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+caption,th{text-align:left;}
+h1,h2,h3,h5,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+/* Global reset-RESET */
+/* The below restores some sensible defaults */
+strong{font-weight:bold;}
+em{font-style:italic;}
+ol,ul,li{list-style-position:outside;/*list-style:none;*/}
+* a{position:relative;}
+/* Gets links displaying over a PNG background */
+a{outline:none;}
+/* Gets rid of Firefox's dotted borders */
+a img{border:none;}
+/* Gets rid of IE's blue borders */
+/* end reset */
+
+/* ----------------------
+Global Typography
+---------------------- */
+html, body {height: 100%;}
+
+body {font:12px "Helvetica Neue", "Lucida Grande", Arial, sans-serif;background:url(/images/bkgSquare.jpg) #1f1f1f;color:#969696;letter-spacing:.04em;line-height:1.4;padding: 0 50px;min-width:950px;}
+h1, h2, h3, h4, h5, h6 {font-family: "Lucida Grande",Arial,Helvetica,sans-serif;font-weight:bold; color: #c4c4c4; }
+  h1 {font-size:20px;}
+  h2 {font-size:18px;}
+  h3 {font-size:16px;} 
+  h4 {font-size:14px;} 
+  h5 {font-size:12px;}
+  h6 {font-size:10px;}
+
+p {padding:5px 0px 15px 0;line-height:1.6;}
+a {color:#969696;text-decoration:underline;}
+a:hover {color:#046380;text-decoration:none;}
+em {font-weight:bold;font-size:110%;font-style:italic;}
+ol, dl, pre, .meta {}
+.note { font-size: .8em; }
+
+.light-border {background:url(../images/bkg/header-bkg.png) bottom left repeat-x;margin:0 0 15px;padding:0 0 8px 0;}
+.dark-border {border-bottom:2px solid #7c8390;margin:0 0 10px;padding:0 0 1px 0 !important;background:none !important;}
+.no-border {background:none !important;border:none !important;}
+
+/* ----------------------
+Utility Classes
+Singular classes which provide specific functionality
+---------------------- */
+.clear {clear:both;height:0px;}
+.full-width {width:100%;}
+.last {margin-right:0;}
+.hide { display: none !important; }
+.al {border:1px solid red !important;}
+.verify {padding:5px 5px 5px 30px;background:url(/images/icon_error.png) no-repeat #fcfcdf;background-position:8px 8px;border:1px solid #e5e5ae;font-weight:bold;}
+.message {padding:5px 5px 5px 30px;background:url(/images/icon_information.png) no-repeat #e6ebf3;background-position:8px 8px;border:1px solid #cee0fe;font-weight:bold;font-size:12px;margin:0 0 10px 0;}
+span.notice{color:#028D2D;display:block;}
+span.error_notice{color:#cc1349;display:block;}
+.btn{background:#262626;margin:10px 0;padding:4px 8px;border-top:2px solid #333;border-left:2px solid #333;border-bottom:2px solid #181818;border-right:2px solid #181818;}
+.btn:hover{border-top:2px solid #181818;border-left:2px solid #181818;border-bottom:2px solid #333;border-right:2px solid #333;}
+
+/* Tables */
+table {width:100%;}
+table thead th { font-weight: bold; border-bottom: 1px solid #aaa; padding: 3px; }
+table tbody th { font-weight: bold; }
+table tbody th,
+table tbody td { padding: 3px; text-align: left; }
+table tbody tr.odd{background:#242424;}
+table tbody tr.odd:hover{background: #191919;}
+tr:hover {background:#191919;}
+
+
+a.button{background:#ccc;padding:5px;border:solid #666 3px;text-decoration:none;color:#666;}
+/* ----------------------
+	Layout
+---------------------- */
+div#wrapper{}
+div#content{color:#c4c4c4;padding-top:15px;}
+div#navigation {position:absolute;top:80px;left:0px;width:100%;}
+div#navigation a {text-decoration:none;margin-right:20px;}
+div#navigation p {margin:0;padding:0;}
+div#navigation ul#top_nav {margin:0 50px;}
+
+div#navigation ul#top_nav li {display:block;}
+li.top_nav span {display:block;float:left;background:url(/images/bkgSquare.jpg) fixed top left;}
+.gray {margin-top:-1px;border-bottom:1px solid #444444;}
+div#navigation li.search { height:24px; margin-top:10px; padding-bottom:0px; border-bottom:1px solid #046380;}
+div#navigation li.search span {float:right;background:url(/images/bkgSquare.jpg) fixed top left;padding-left:40px;}
+div#navigation li span input {margin:0 10px;}
+div#extra{}
+div#footer{clear:both;width:100%;margin-top:20px;padding:10px 0;}
+/* end layout */
+
+div#content a{color:#4c7180;}
+div#content a:hover{color:#046380;}
+div#content h1{margin-bottom:15px;}
+
+#header {height:140px;}
+#header h1 {display:block;background:url(/images/logo.png);width:155px;height:45px; overflow:hidden; text-indent:-4em; position:relative; top:15px;}
+#header h1 a {display:block;width:100%;height:100%;}
+#app_login {color:#fff;position:absolute; top:5px; right:60px;}
+#app_login span {margin:0 15px;}
+/* ----------------------
+   Search Bar
+----------------------- */
+#search_box{background:#fff;}
+
+/* ----------------------
+	Image Shell
+---------------------- */
+.image_shell {background:#fff;padding:5px;border:4px solid #DDDDE1;}
+.message ol {margin-left:20px;}
+.c_image_shells ol { margin:0 0 10px 20px;}
+.c_image_shells ul { margin-left:20px;}
+.c_image_shells .column {float:left;margin:0 10px;}
+/* ----------------------
+	Request
+---------------------- */
+.c_requests .column {float:left;margin:0 10px;}
+.c_requests table {margin-bottom:40px;}
+/* ----------------------
+	Calculator
+---------------------- */
+body.c_calculator.index {padding: 0 10px;}
+/* ----------------------
+	Forms
+	Any common UI or interactive elements which can be applied anywhere in the site
+ ---------------------- */
+
+/* General Form Styles  */
+iframe {border:none;}
+fieldset { margin:0 0 20px; padding:10px 20px;background:#222222; }
+legend {font-weight:bold;font-size:16px;}
+fieldset h3 { font-size: 1.6em; }
+fieldset h4 { font-size: 1.4em; margin: 0 0 10px; }
+textarea {border:3px solid #c9cac8;color:#666;padding:3px;font-family:"Lucida Grande", "Lucida Sans", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;width:500px;height:150px;}
+input{/*background:#1f1f1f;*/border:1px solid #1f1f1f;padding:5px;font-size:1.1em;}
+input[type="file"] {font-size:1em;}
+input[type="submit"] {background:url(/images/sprite.png) no-repeat;width:150px;height:32px;color:#ccbf11;}
+
+ul.form {margin:0 0 5px 0;float:left;}
+
+ul.form li {list-style:none;margin:0;padding: 8px 0;float:left;width:100%;}
+ul.form li label {display:block;float:left;font-weight:bold;}
+/*ul.form li input, form .textbox { width:250px;border:1px solid #c9cac8;font-size:14px;padding:3px;color:#666;display:block;float:left; }*/
+ul.form li.remember_me label {display:inline;margin-right:10px;}
+ul.form li.remember_me input#remember_me {display:inline;}
+ul.form li input.required {border:3px solid #c9cac8;}
+ul.form li .note { float: none; clear: left; margin: 0; padding: 2px 0; color: #666; }
+
+ul.form .list ul { float: left; }
+ul.form .list label { float: left; width: 100px;}
+ul.form .list li { display: block; float: none; padding: 0 0 5px; border: none; }
+ul.form .list li label { float: none; width: auto; }
+ul.form .list li label input { margin-right: 8px; margin-top: 3px; }
+ul.form ul.errorlist li {border:none;color:#C17878;font-weight:bold;margin:0;padding:0;float:left;width:100%;}
+p.forgot_password {float:right;}
+div#content p.forgot_password a {color:#C4C4C4;}
+
+#search{margin:0;padding-top:10px;padding-bottom:10px;font-size:11px;}
+#search input{font-size:11px;margin:2px;}
+#search-text{width:170px}
+.edit_proof input{margin-right:20px;}
+div.image,div.image_shell,div.proof,div.master{float:left;width:175px;height:200px;margin:5px;}
+
+#proof_submit{margin-left:200px;}
+.product_category td{background:#8F8F8F;}
+.product_type td{background:#9F9F9F;}
+.product_placement td{background:#AFAFAF;}
+.product_durations td{background:#BFBFBF;}
+.product_printruns td{background:#CFCFCF;}
+.product_sizes td{background:#DFDFDF;}
+.product_run td{background:#EFEFEF;}
+
+/* footer   */
+#footer-inner {margin-left:20px;}
+#footer {}
+#footer .column {float:left;border-right:1px solid #ccc;margin:30px 35px 30px 0;min-width:186px;padding:0 5px 0 0;font-size:12px;min-height:184px;max-width:207px;}
+#footer .column.wide {max-width:280px;}
+#footer h1, #footer h2, #footer h4, #footer h5 {  }
+#footer a { }
+#footer .column h4 {font-size:16px;}
+#footer .column ul {float:left;margin:0 40px 0 0;}
+#footer .column li {list-style:none;padding:5px 0;margin:0;}
+#footer .column.last {border:none;margin-right:0;}
+#footer .search {float:left;}
+#footer .search input.text {background:url(../images/bkg/search-icon.png) center right no-repeat #fff;border:none;padding:3px;color:#666;font-weight:bold;width:159px;padding:8px 25px 4px 5px;}
+#footer .copyright {text-align:center;}
+
+
+
+
+.requests_action_needed legend { background: red; }
+.requests_action_taken legend { background: yellow; }
+.requests_action_taken #upload_stock { display:none; }
+
+
+/* icons */
+.forsale { text-indent:-200em; overflow:hidden; background: url(/images/Sprite.gif) -30px 0px no-repeat; width:20px; height:22px; display:inline-block; }
+.action_required { text-indent:-200em; overflow:hidden; background: url(/images/Sprite.gif) -50px 0px no-repeat; width:20px; height:22px; display:inline-block; text-decoration:none; }
+.upload_new_image { overflow:hidden; background: url(/images/Sprite.gif) 0px -20px no-repeat; padding-top:10px; width:20px; height:10px; display:inline-block; text-decoration:none; }
+.upload_new_photo_icon { text-indent:-200em; overflow:hidden; background: url(/images/Sprite.gif) -35px -20px no-repeat; width: 30px; height:30px; display:inline-block; }
+
+/* buttons */
+.add_btn { text-indent:4em; font-weight:bold; text-decoration:none;}
+.upload_img_btn { text-indent:5em; font-weight:bold; text-decoration:none;  }
+
+
+
+/* default rails */
+#flash_notice,#flash_error{padding:5px 8px;margin:10px 0;}
+#flash_notice{background-color:#CFC;border:solid 1px #6C6;}
+#flash_error{background-color:#FCC;border:solid 1px #C66;}
+
+.fieldWithErrors{padding:2px;background-color:red;display:table;}
+#errorExplanation{width:400px;border:2px solid red;padding:7px;padding-bottom:12px;margin-bottom:20px;background-color:#f0f0f0;}
+#errorExplanation h2{text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:12px;margin:-7px;background-color:#c00;color:#fff;}
+#errorExplanation p{color:#333;margin-bottom:0;padding:5px;}
+#errorExplanation ul li{font-size:12px;list-style:square;}
+
+
+/**************
+  Sign-up Page
+***************/
+.c_sessions.a_new fieldset{width:450px;float:left;}
+.c_sessions.a_new #no_account_box{width:450px;float:left;margin-left:50px;}

@@ -1,0 +1,50 @@
+<h1><%= @request.image_shell.description.title %></h1>
+<%= error_messages_for :request %>
+<a target="_blank" href="<%= @request.original_image.image.url(:original) %>">
+	<%= image_tag @request.original_image.image.url(:medium) %>
+</a>
+<% if @request.updated_image -%>
+<a target="_blank" href="<%= @request.updated_image.image.url(:original) %>">
+	<%= image_tag @request.updated_image.image.url(:medium) %>
+</a>
+<% end -%>
+
+<fieldset>
+	<legend>Request for <%= @request.request_type.capitalize %></legend>
+	<% form_for @request do |f| %>
+	  <%= f.hidden_field :image_id %>
+		
+		<p>Requires model release: 
+		<% fields_for "image_shell", @request.image_shell do |image_shell| -%>
+			<%= label 'image_shell_requires_release_true', "Yes" %>
+			<%= image_shell.radio_button :requires_release, true, :checked => (@request.image_shell.requires_release=="true") %>
+			<%= label 'image_shell_requires_release_false', "No" %>
+			<%= image_shell.radio_button :requires_release, false, :checked => (@request.image_shell.requires_release!="true") %>
+		<% end -%></p>
+		<p>
+			<%= label 'approve', 'State' %>
+			<%= f.select "state", ["new","action_needed","approved","denied"] %>
+		</p>
+		<p>
+			<%= label 'message', 'Message' %><br/>
+			<%= f.text_area :message %>			
+		</p>
+	  <p><%= f.submit "Submit" %></p>
+	<% end %>
+</fieldset>
+
+<p>
+  <%= link_to "Show", @request %> |
+  <%= link_to "View All", requests_path %>
+</p>
+<script type="text/javascript" charset="utf-8">
+	// $("document").ready(function(){
+	// 	alert($("#request_message").defaultValue)
+	// 	$("#request_message").parent().hide();
+	// 	$("#request_state").change(function(e){
+	// 		if(e.target.value=="action_needed") {
+	// 			$("#request_message").parent().show();
+	// 		}
+	// 	})
+	})
+</script>

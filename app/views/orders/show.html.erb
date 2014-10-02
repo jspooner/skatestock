@@ -1,0 +1,24 @@
+<table>
+	<tr>
+		<th>Invoice</th>
+		<th>User</th>
+		<th>Purchase Date</th>
+		<th>Amount</th>
+		<th>Status</th>
+	</tr>
+	<tr>
+		<td><%= @cart.id %></td>
+		<td><%= @cart.user.login %></td>
+		<td><%= @cart.purchased_at %></td>
+		<td><%= number_to_currency @cart.total_price %></td>
+	</tr>
+</table>
+<% for pn in @cart.payment_notifications -%>
+	<p><%= pn.status %><br/>
+	<%= pn.transaction_id %><br/>
+	Params:<br/>
+	<% for o in pn.params %>
+		<%= o[0] %> <b><%= o[1] %></b> <br/>
+	<% end -%>
+	</p>
+<% end -%>

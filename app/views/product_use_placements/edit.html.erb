@@ -1,0 +1,29 @@
+<h1>Editing product_use_placement</h1>
+
+<% form_for(@product_use_placement) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>
+	
+	<p><label for="domains">Category</label><br/>
+	<% for c in @product_categories -%>
+		<%= check_box_tag('product_categories_list[]', c.id, @product_use_placement.product_categories.collect { |o| o.id }.include?(c.id) ) %>  <%= c.name %><br/>
+	<% end -%>
+	</p>
+	
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', product_use_placements_path %>

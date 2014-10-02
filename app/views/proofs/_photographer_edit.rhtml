@@ -1,0 +1,79 @@
+<% if @proof.state == 'approved' -%>
+	<p<%= link_to 'Upload Master Image', new_master_path + "?id=" + params[:id] %></p>
+	cancel
+<% elsif @proof.state == 'private' || @proof.state == 'pending' -%>
+	<% form_for(@proof) do |f| %>
+		<%= f.error_messages %>
+		<%= label 'state', 'private' %>
+		<%= f.radio_button 'state', 'private' %>
+		<%= label 'state', 'apply for stock' %>
+		<%= f.radio_button 'state', 'pending' %>
+		<%= f.submit "Update" %>		
+		<p><%= image_tag @proof.public_filename, {:width => 300} %></p>
+		
+		<% prefix = "proof[description]" %>
+		<% fields_for prefix, @proof.description do |description_form| -%>
+			<p>
+		    <%= description_form.label :title %><br />
+		    <%= description_form.text_field :title %>
+		  </p>
+			<p>
+		    <%= description_form.label :description %><br />
+		    <%= description_form.text_field :description %>
+		  </p>
+		  <p>
+		    <%= description_form.label :location %><br />
+		    <%= description_form.text_field :location %>
+		  </p>
+		  <p>
+		    <%= description_form.label :obsticle %><br />
+		    <%= description_form.text_field :obsticle %>
+		  </p>
+		  <p>
+		    <%= description_form.label :trick %><br />
+		    <%= description_form.text_field :trick %>
+		  </p>
+		  <p>
+		    <%= description_form.label :gender %><br />
+		    <%= description_form.text_field :gender %>
+		  </p>
+		  <p>
+		    <%= description_form.label :people %><br />
+		    <%= description_form.text_field :people %>
+		  </p>
+		  <p>
+		    <%= description_form.label :portrait %><br />
+		    <%= description_form.check_box :portrait %>
+		  </p>
+		  <p>
+		    <%= description_form.label :age %><br />
+		    <%= description_form.text_field :age %>
+		  </p>
+		  <p>
+		    <%= description_form.label :color %><br />
+		    <%= description_form.text_field :color %>
+		  </p>
+		  <p>
+		    <%= description_form.label :state %><br />
+		    <%= description_form.text_field :state %>
+		  </p>
+		  <p>
+		    <%= description_form.label :city %><br />
+		    <%= description_form.text_field :city %>
+		  </p>
+		  
+		<% end -%>
+		
+		<%= f.submit "Update" %>		
+	<% end %>
+<% end -%>
+
+
+<% if @proof.state == 'private' -%>
+		<p><strong>ADD</strong>Send to Consumer form HERE</p>
+<% end -%>
+	
+	
+	
+	
+	

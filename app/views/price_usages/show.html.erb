@@ -1,0 +1,47 @@
+
+<h1><%= @price_usage.name %></h1>
+<table>
+<tr>
+	<th>medium</th>
+	<th>option</th>
+	<th>price</th>
+	<th>percentage</th>
+	<th>is editorial</th>
+</tr>
+<% for media in @price_usage.price_medias -%>
+<tr class="<%= cycle "odd", "even" %>">
+	<td><%= media.name %></td>
+	<td></td>
+	<td>$<%= media.price %></td>
+	<td><%= media.percentage %>%</td>
+	<td><%= media.is_editorial? %></td>
+	<td><%= link_to 'Edit', edit_price_media_path(media) %></td>
+  <td><%= link_to 'Destroy', media, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+<% for o in @options -%>
+<tr>
+	<td></td>
+	<td><b><%= o.name %> <%= link_to 'add', new_price_option_path + "/" + media.id.to_s + "/" + o.name, :class => "add_option" %></b></td>
+</tr>
+<% for x in media.getOptions o.name -%>
+<tr>
+	<td></td>
+	<td><%= x.name %></td>
+	<td>$<%= x.price %></td>
+	<td><%= x.percentage %>%</td>
+	<td></td>
+	<td><%= link_to 'Edit', edit_price_option_path(x) %></td>
+  <td><%= link_to 'Destroy', x, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+
+<% end -%>
+<% end -%>
+<tr><td></td><td><%= link_to "New Option", new_price_option_name_path %></td></tr><% end -%>
+</table>
+<td><%= link_to 'Add Media', new_price_media_path + "/" + @price_usage.id.to_s %></td>
+
+
+<p>
+<%= link_to 'Edit', edit_price_usage_path(@price_usage) %> |
+<%= link_to 'Back', price_usages_path %>
+</p>

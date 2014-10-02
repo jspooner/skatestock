@@ -1,0 +1,72 @@
+<% title "Edit Image Shell" %>
+<%= error_messages_for :image_shell %>
+
+		<%= image_tag @image_shell.original.image.url(:medium)  %>
+		<!-- <p style="float:left">Stock<br/>
+		<%= image_tag @image_shell.stock.image.url(:thumb) if @image_shell.stock  %><br/>
+		<%= label 'stock', 'delete' %>
+		<%= check_box 'stock', 'delete' %>
+		</p>
+		<p style="float:left;">Editorial<br/>
+		<%= image_tag @image_shell.editorial.image.url(:thumb) if @image_shell.editorial  %></p>
+		<div style="clear:both"></div> -->
+
+<% form_for(@image_shell, :html => { :multipart => true }) do |f| %>
+
+  <%= f.hidden_field :user_id %>
+	<%= hidden_field "stock_request", "value", :value => 1  %>
+	<%= f.hidden_field "stock_base_price", :value => 0  %>
+	<%= f.hidden_field "editorial_base_price", :value => 0  %>
+	<%= f.hidden_field "private_base_price", :value => 0  %>
+
+	<% @image_shell.requests.each do |r| %>
+		<% if r.action_needed? || r.action_taken? %>
+		<fieldset class="requests_<%= r.state %>">
+			<legend><%= r.request_type.capitalize %> (<%= state_to_string r.state %>)</legend>
+			
+			<p><%= r.message %></p>		
+			
+			<%= image_tag r.updated_image.image.url(:thumb), :id => "thumb_#{r.request_type}" if r.updated_image %>	
+			<p class="delete_field">
+				<% if r.updated_image -%>
+					<label>Delete</label> <%= check_box "delete", "#{r.request_type}" %>	
+				<% end -%>
+			</p>
+			
+			<% fields_for r.request_type, @image_shell do |image_form| -%>
+				<p id="upload_stock">
+					<label for="<%= r.request_type %>">Image File:</label>
+					<%= image_form.file_field :image %>
+				</p>
+			<% end -%>
+			
+		<% end %>
+		</fieldset>	
+	<% end %>
+	
+	<% if current_user.is_admin -%>
+	<fieldset>
+		<legend>Sale Options</legend>
+	  <p>
+	    <%= f.label :stock_base_price %><br />
+	    <%= f.text_field :stock_base_price %>
+	  </p>
+	</fieldset>
+	<% else -%>
+		<% if @stock_request == nil %>
+		<% else -%>
+			<%= "Stock approved" if @stock_request.approved?  %>
+			<%= "Stock denied" if @stock_request.denied?  %>
+			<%= "Pending our approval for stock." if @stock_request.new? || @stock_request.action_taken?  %>
+		<% end -%>	
+	<% end -%>
+
+	<%= render :partial => 'metadata_form', :locals => { :riders => @riders } %>
+	
+  <p><%= f.submit "Submit" %></p>
+<% end %>
+
+
+<p>
+  <%= link_to "View All Images", image_shells_path %>
+</p>

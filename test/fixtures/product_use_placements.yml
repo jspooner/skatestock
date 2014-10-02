@@ -1,0 +1,64 @@
+--- 
+product_use_placements_001: 
+  name: Cover
+  updated_at: 2008-12-21 07:44:39
+  price: 
+  id: "1"
+  percentage: "120"
+  created_at: 2008-12-21 07:43:51
+product_use_placements_002: 
+  name: Interior
+  updated_at: 2008-12-22 06:53:35
+  price: 
+  id: "2"
+  percentage: "0.01"
+  created_at: 2008-12-22 06:53:35
+product_use_placements_003: 
+  name: Section in Front
+  updated_at: 2008-12-22 06:54:06
+  price: 
+  id: "3"
+  percentage: "15"
+  created_at: 2008-12-22 06:54:06
+product_use_placements_004: 
+  name: Front Page
+  updated_at: 2008-12-22 06:54:23
+  price: 
+  id: "4"
+  percentage: "25"
+  created_at: 2008-12-22 06:54:23
+product_use_placements_005: 
+  name: Body of Program
+  updated_at: 2008-12-22 07:07:15
+  price: 
+  id: "5"
+  percentage: "0.01"
+  created_at: 2008-12-22 07:07:15
+product_use_placements_006: 
+  name: Prop or Set Decor
+  updated_at: 2008-12-22 07:07:38
+  price: 
+  id: "6"
+  percentage: "25"
+  created_at: 2008-12-22 07:07:38
+product_use_placements_007: 
+  name: Title Section or Closing Section
+  updated_at: 2008-12-22 07:08:15
+  price: 
+  id: "7"
+  percentage: "62.5"
+  created_at: 2008-12-22 07:08:15
+product_use_placements_008: 
+  name: Single Placement
+  updated_at: 2008-12-23 05:15:13
+  price: 
+  id: "8"
+  percentage: "0.01"
+  created_at: 2008-12-23 05:15:13
+product_use_placements_009: 
+  name: Multiple Placement
+  updated_at: 2008-12-23 05:15:36
+  price: 
+  id: "9"
+  percentage: "57.5"
+  created_at: 2008-12-23 05:15:36

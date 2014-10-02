@@ -1,0 +1,41 @@
+<h1>New line_item</h1>
+
+<% form_for(@line_item) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= label_tag :use_category, "use_category"  %>
+		<%= f.text_field :use_category %>
+	</p>	
+	<p>
+		<%= label_tag :use_type, "use_type"  %>
+		<%= f.text_field :use_type %>
+	</p>	
+	<p>
+		<%= label_tag :use_size, "use_size"  %>
+		<%= f.text_field :use_size %>
+	</p>	
+	<p>
+		<%= label_tag :use_circulation, "use_circulation"  %>
+		<%= f.text_field :use_circulation %>
+	</p>	
+	<p>
+		<%= label_tag :use_distribution, "use_distribution"  %>
+		<%= f.text_field :use_distribution %>
+	</p>	
+	<p>
+		<%= label_tag :use_duration, "use_duration"  %>
+		<%= f.text_field :use_duration %>
+	</p>	
+	<p>
+		<%= label_tag :use_duration_start, "use_duration_start"  %>
+		<%= f.text_field :use_duration_start %>
+	</p>	<p>
+		<%= label_tag :use_industry, "use_industry"  %>
+		<%= f.text_field :use_industry %>
+	</p>	
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', line_items_path %>

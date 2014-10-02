@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+<% if current_user  %>
+	<% if current_user.my_group == "admin"  %>
+		<h3><%= link_to @num_proofs + " pending proofs", "/proofs/?view=pending" %></h3>
+		<h3><%= link_to @num_userss + " pending users", "/users" %></h3>
+	<% elsif current_user.my_group == "photographer" %>
+		<h3><%= link_to "Submit New Photos", new_image_path %></h3>
+
+		
+		
+	<% elsif current_user.my_group == "consumer" %>
+		
+		
+		
+	<% end %>
+<% else %>
+	<h3><%= link_to 'Sign up to by photos', new_user_path + '?my_group=photographer'  %></h3>
+	<h3><%= link_to 'Sign up to sell photos', new_user_path %></h3>
+<% end %>

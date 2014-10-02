@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title><%= yield :title %> - Shrelp! Skateboarding Stock Photography</title>
+  <%= stylesheet_link_tag 'style' %>
+  <%= stylesheet_link_tag 'thickbox' %>
+  <%= stylesheet_link_tag 'jquery.autocompletefb' %>
+	<%= javascript_include_tag 'jquery' %>
+	<%= javascript_include_tag 'jquery-ui' %>
+	<%= javascript_include_tag 'jrails' %>
+	<%= javascript_include_tag 'thickbox' %>
+	<%= javascript_include_tag 'jquery.bgiframe.min' %>
+	<%= javascript_include_tag 'jquery.dimensions' %>
+	<%= javascript_include_tag 'jquery.autocomplete' %>
+	<%= javascript_include_tag 'jquery.autocompletefb' %>
+	<%= javascript_include_tag 'localdata' %>
+	<%= javascript_include_tag 'application' %>
+</head>
+<body class="c_<%= controller.controller_name %> a_<%= controller.action_name %>">
+	<div id="container">
+		<div id="header"><h1><a href="/"><%= link_to "Shrelp!",'/' %></a></h1>
+			<div id="app_login">
+				<% if controller.authorized?  -%>
+				<p><%= current_user.email %> <span>|</span> <%= link_to 'Sign Out', logout_path %></p>
+				<% else -%>
+				<p><%= link_to 'Register', signup_path %> <span>|</span> <%= link_to 'Sign In', login_path %></p>
+				<% end -%>
+			</div>
+		</div>
+		<div id="wrapper">
+			<div id="content">
+				<span class="notice"><%= flash[:notice] %></span>
+				<%= yield  %>
+			</div>
+		</div>
+		<div id="navigation">
+	    <ul id="top_nav">
+	      <li class="top_nav">
+				<span>
+				<% if logged_in? && controller.authorized? %>
+					<% if current_user.my_group == "admin" %>
+						<%= render :partial => 'layouts/admin_menu' %>
+					<% elsif current_user.my_group == "photographer" %>
+						<%= render :partial => 'layouts/photographerMenu' %>
+					<% elsif current_user.my_group == "consumer" %>
+						<%= render :partial => 'layouts/consumerMenu' %>
+					<% elsif current_user.my_group == "rider" %>
+						<%= render :partial => 'layouts/rider_menu' %>
+					<% end %>
+				<% else %>
+				<% end %>
+				</span><div class="clear"></div>
+				</li>
+				<li class="gray"></li>
+				<li class="search">
+					<span><input checked type="checkbox"/><label>advertising</label> <input checked type="checkbox"/><label>editorial</label> 
+					<input id="search_box" type="input"/><input type="button" value="Search"></input></span><div class="clear"></div>
+				</li>
+			</ul>
+			
+		</div>	
+			
+	</div>
+
+
+	<div id="extra">
+	</div>
+	<div id="footer">
+	<div id="footer-inner">	
+		<div class="column">
+			<h4>Consumers</h4>
+			<ul>
+				<% if controller.authorized? -%>
+					<li><%= link_to 'account', user_path(current_user) %></li>
+					<li><%= link_to 'my cart', cart_path %></li>
+				<% else -%>
+					<li><%= link_to 'sign up to buy', consumer_signup_path %></li>
+				<% end -%>
+			</ul>
+		</div>	
+
+		<div class="column">
+			<h4>Photographers</h4>
+			<ul>
+				<li><%= link_to 'sign up to sell', photographer_signup_path %></li>
+			</ul>
+		</div>	
+	
+		<div class="column">
+			<h4>Riders</h4>
+			<ul>
+				<li><%= link_to 'rider sign up', rider_signup_path %></li>
+			</ul>
+		</div>	
+	
+		<div class="column last">
+			<h4>Info</h4>
+			<ul>
+				<li><%= link_to 'about us', about_path %></li>
+				<li><%= link_to 'contact', about_path(:contact) %></li>
+				<li><%= link_to 'careers', about_path(:careers) %></li>
+				<li><%= link_to 'editorial', about_path(:editorial) %></li>
+				<li><%= link_to 'media coverage', about_path(:media) %></li>
+			</ul>
+		</div>		
+		<div class="clear"></div>
+			<p class="copyright">&copy; 2009 Shrelp! Inc. <%= link_to 'terms of use', about_path(:termsofuse) %> | <%= link_to 'privacy policy', about_path(:privacy) %></p>
+			<div class="clear">
+		</div>
+	</div>
+
+	</div>
+<%= render :partial => 'layouts/google' %>
+<script type="text/javascript">
+  var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+  document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript">
+UserVoice.Tab.show({ 
+  key: 'shrelp',
+  host: 'shrelp.uservoice.com', 
+  forum: 'general', 
+  alignment: 'right',
+  background_color:'#046380', 
+  text_color: 'black',
+  hover_color: '#1ba3cc',
+  lang: 'en'
+})
+</script>
+</body>
+</html>

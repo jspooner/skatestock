@@ -1,0 +1,24 @@
+<% content_for :title do %>All Invitations<% end %>
+<p>
+  <b>First name:</b>
+  <%=h @invitation.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @invitation.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @invitation.email %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @invitation.phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_invitation_path_secure(current_user,@invitation) %> |
+<%= link_to 'Back', user_invitations_path %>

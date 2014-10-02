@@ -1,0 +1,257 @@
+--- 
+users_004: 
+  job_title: 
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  my_group: consumer
+  activated_at: 2009-01-12 17:46:40
+  updated_at: 2009-01-17 17:46:40
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9a
+  remember_token_expires_at: 
+  id: "4"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: pam
+  contact_city: 
+  state: active
+  created_at: 2009-01-16 17:46:40
+  email: pam@example.com
+users_005: 
+  job_title: 
+  salt: fe8853bb6040ac1ce3d6adb30c34e1de3409dcab
+  my_group: photographer
+  activated_at: 2009-01-12 17:46:40
+  updated_at: 2009-01-23 05:16:46
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: 94cb15ab29cef85a3f4da22b839fa7152d161261
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 7160dc9c698a205d0b33a24dd4f7b65f448710f6
+  remember_token_expires_at: 
+  id: "5"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: info@shrelp.com
+  contact_city: 
+  state: active
+  created_at: 2009-01-23 05:16:46
+  email: info@shrelp.com@gmail.com
+users_006: 
+  job_title: 
+  salt: b561789e31b9fc934255179a42eb1306c1143a6d
+  my_group: consumer
+  activated_at: 2009-04-18 18:48:51
+  updated_at: 2009-04-18 18:48:51
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: b6224c9b7c3ac08d49cafa22cf9a9c1817cb671d
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 
+  remember_token_expires_at: 
+  id: "6"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: zachp
+  contact_city: 
+  state: active
+  created_at: 2009-04-18 18:46:16
+  email: zpetschek@gmail.com
+users_007: 
+  job_title: Select One
+  salt: 89c7a5b66636fd30faedeef145920b881ba39080
+  my_group: rider
+  activated_at: 2009-05-18 02:19:42
+  updated_at: 2009-05-18 02:19:42
+  company_name: ""
+  contact_zip: "99999"
+  agreed_to_model_release: "1"
+  crypted_password: 02078a170c75ae9fec411cf32b3372417f558f8c
+  contact_address: "99"
+  deleted_at: 
+  billing_city: ""
+  activation_code: 
+  remember_token_expires_at: 
+  id: "43"
+  billing_state: ""
+  company_type: Select One
+  agreed: "1"
+  billing_zip: ""
+  fax: ""
+  phone: "8888888888"
+  contact_state: xca
+  remember_token: 
+  first_name: Jake
+  billing_address: ""
+  last_name: Brown
+  login: jake
+  contact_city: sd
+  state: active
+  created_at: 2009-05-18 02:17:56
+  email: jbrown@aaa.com
+users_008: 
+  job_title: Select One
+  salt: 756be934e4ba2618b3ae569bc6b0acf237302447
+  my_group: rider
+  activated_at: 2009-05-18 02:22:26
+  updated_at: 2009-05-18 02:22:26
+  company_name: ""
+  contact_zip: "99999"
+  agreed_to_model_release: "1"
+  crypted_password: dc73cb78d729269579b63380b3e50a16e33b3c3b
+  contact_address: "99"
+  deleted_at: 
+  billing_city: ""
+  activation_code: 
+  remember_token_expires_at: 
+  id: "44"
+  billing_state: ""
+  company_type: Select One
+  agreed: "1"
+  billing_zip: ""
+  fax: ""
+  phone: "8888888888"
+  contact_state: df
+  remember_token: 
+  first_name: Chris
+  billing_address: ""
+  last_name: Miller
+  login: miller
+  contact_city: ads
+  state: active
+  created_at: 2009-05-18 02:22:07
+  email: mdsfa@jdla.com
+users_001: 
+  job_title: 
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  my_group: admin
+  activated_at: 2009-01-12 17:46:40
+  updated_at: 2009-01-17 17:46:40
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9b
+  remember_token_expires_at: 
+  id: "1"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: root
+  contact_city: 
+  state: admin
+  created_at: 2009-01-12 17:46:40
+  email: root@example.com
+users_002: 
+  job_title: 
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  my_group: admin
+  activated_at: 2009-01-12 17:46:40
+  updated_at: 2009-01-17 17:46:40
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9a
+  remember_token_expires_at: 
+  id: "2"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: admin
+  contact_city: 
+  state: admin
+  created_at: 2009-01-16 17:46:40
+  email: admin@example.com
+users_003: 
+  job_title: 
+  salt: 7e3041ebc2fc05a40c60028e2c4901a81035d3cd
+  my_group: photographer
+  activated_at: 2009-01-12 17:46:40
+  updated_at: 2009-05-18 01:40:01
+  company_name: 
+  contact_zip: 
+  agreed_to_model_release: "0"
+  crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1
+  contact_address: 
+  deleted_at: 
+  billing_city: 
+  activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9a
+  remember_token_expires_at: 
+  id: "3"
+  billing_state: 
+  company_type: 
+  agreed: "0"
+  billing_zip: 
+  fax: 
+  phone: 
+  contact_state: 
+  remember_token: 
+  first_name: 
+  billing_address: 
+  last_name: 
+  login: zack
+  contact_city: 
+  state: active
+  created_at: 2009-01-16 17:46:40
+  email: zack@example.com

@@ -1,0 +1,45 @@
+--- 
+requests_001: 
+  message: 
+  updated_at: 2009-06-16 04:00:46
+  image_shell_id: "41"
+  id: "426"
+  updated_image_id: 
+  user_id: "5"
+  image_id: "68"
+  state: new
+  created_at: 2009-06-16 04:00:46
+  request_type: stock
+requests_002: 
+  message: 
+  updated_at: 2009-06-16 04:00:46
+  image_shell_id: "41"
+  id: "427"
+  updated_image_id: 
+  user_id: "5"
+  image_id: "68"
+  state: new
+  created_at: 2009-06-16 04:00:46
+  request_type: editorial
+requests_003: 
+  message: 
+  updated_at: 2009-06-16 04:03:47
+  image_shell_id: "42"
+  id: "428"
+  updated_image_id: 
+  user_id: "5"
+  image_id: "69"
+  state: new
+  created_at: 2009-06-16 04:03:47
+  request_type: stock
+requests_004: 
+  message: 
+  updated_at: 2009-06-16 04:03:47
+  image_shell_id: "42"
+  id: "429"
+  updated_image_id: 
+  user_id: "5"
+  image_id: "69"
+  state: new
+  created_at: 2009-06-16 04:03:47
+  request_type: editorial

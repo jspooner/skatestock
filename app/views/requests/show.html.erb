@@ -1,0 +1,24 @@
+
+
+<p>
+  <strong>Image:</strong>
+  <%=h @request.image_id %>
+</p>
+<p>
+  <strong>Message:</strong>
+  <%=h @request.message %>
+</p>
+<p>
+  <strong>Request Type:</strong>
+  <%=h @request.request_type %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @request.state %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_request_path(@request) %> |
+  <%= link_to "Destroy", @request, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", requests_path %>
+</p>

@@ -1,0 +1,11 @@
+<h1>Stock Photos</h1>
+
+<% if current_user.my_group == "photographer"  %>
+<%= render :partial => 'masters/photographer' %>
+<% elsif current_user.my_group == "admin"  %>
+	<% for master in @masters -%>
+		<% div_for master, :class => master.state do -%>
+			<%= link_to image_tag(master.public_filename(:thumb)), edit_master_path(master)  %>
+		<% end -%>
+	<% end -%>
+<% end %>

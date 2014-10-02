@@ -1,0 +1,10 @@
+<%= will_paginate @proofs %>
+<% if current_user.my_group == "photographer"  %>
+	<%= render :partial => 'proofs/photographer' %>
+<% else %>
+<% for proof in @proofs %>
+  <% div_for proof, :class => proof.state do %>
+   	<%= link_to( image_tag(proof.public_filename(:thumb)), edit_proof_path(proof) ) %><br/>
+  <% end %>
+<% end %>
+<% end %>

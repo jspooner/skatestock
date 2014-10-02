@@ -1,0 +1,28 @@
+	
+<p> 
+	<%= label_tag :use_distribution, "Territory"  %>
+	<%= country_select 'line_item', :use_territory, ["United States", "Worldwide","North America","South America", 
+																									 "Asia", "Europe", "Australia", "Africa" ], {"United States" => :selected}, :multiple=>true, :style => "height:130px" %>
+</p>	
+<p>
+	<%= label_tag :use_industry, "Industry", :align => "top"  %>
+	<%= select 'line_item', :use_industry, @industry.collect { |o| [o.name,o.name] } %>
+</p>
+
+<p>
+	<%= label_tag :use_duration_start, "Start Date"  %>
+	<%= date_select 'line_item', :use_duration_start %>
+</p>
+
+<% i = 1 -%>
+<% for optionName in @price_options -%>
+<p>
+	<%= label_tag :use_options, optionName.name  %>
+	<%= select  'options_' + i.to_s, :price_options, @media.getOptions(optionName.name).collect { |o| [o.name, o.id] }, {}, {:onchange => "javascript:onOptionChange()"} %>
+</p>
+<% i = i + 1 -%>
+<% end -%>
+<%= hidden_field 'line_item', :price_options %>
+<p>
+<input id="line_item_calc" onclick="javascript:calculatePrice()" value="Calculate Price" type="button">
+</p>

@@ -1,0 +1,25 @@
+<h1>Editing price_option</h1>
+
+<% form_for(@price_option) do |f| %>
+  <%= f.error_messages %>
+	<%= f.hidden_field :option %>
+	<%= f.hidden_field :price_media_id %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @price_option %> |
+<%= link_to 'Back', price_options_path %>

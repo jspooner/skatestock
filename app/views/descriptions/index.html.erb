@@ -1,0 +1,44 @@
+
+<table>
+  <tr>
+    <th>Proof</th>
+    <th>Master</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Obsticle</th>
+    <th>Trick</th>
+    <th>Gender</th>
+    <th>People</th>
+    <th>Portrait</th>
+    <th>Age</th>
+    <th>Color</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Rider</th>
+  </tr>
+  <% for description in @descriptions %>
+    <tr>
+      <td><%=h description.proof_id %></td>
+      <td><%=h description.master_id %></td>
+      <td><%=h description.title %></td>
+      <td><%=h description.description %></td>
+      <td><%=h description.location %></td>
+      <td><%=h description.obsticle %></td>
+      <td><%=h description.trick %></td>
+      <td><%=h description.gender %></td>
+      <td><%=h description.people %></td>
+      <td><%=h description.portrait %></td>
+      <td><%=h description.age %></td>
+      <td><%=h description.color %></td>
+      <td><%=h description.state %></td>
+      <td><%=h description.city %></td>
+      <td><%=h description.rider_id %></td>
+      <td><%= link_to "Show", description %></td>
+      <td><%= link_to "Edit", edit_description_path(description) %></td>
+      <td><%= link_to "Destroy", description, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Description", new_description_path %></p>

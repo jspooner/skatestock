@@ -1,0 +1,24 @@
+<h1>New Product Type for <%= @product_category.name %></h1>
+
+<% form_for(@product_type) do |f| %>
+  <%= f.error_messages %>
+	<%= f.hidden_field :product_category_id, {:value => @product_category.id.to_s}  %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>	
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>	
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', product_types_path %>

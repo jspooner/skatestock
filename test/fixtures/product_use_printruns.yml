@@ -1,0 +1,197 @@
+--- 
+product_use_printruns_021: 
+  name: "500"
+  updated_at: 2008-12-23 05:05:35
+  price: 
+  id: "21"
+  percentage: "100"
+  created_at: 2008-12-23 05:05:35
+product_use_printruns_010: 
+  name: "1,000,000"
+  updated_at: 2008-12-22 07:34:24
+  price: 
+  id: "10"
+  percentage: "84.5"
+  created_at: 2008-12-22 07:34:24
+product_use_printruns_009: 
+  name: "500,000"
+  updated_at: 2008-12-22 07:33:47
+  price: 
+  id: "9"
+  percentage: "54.7"
+  created_at: 2008-12-22 07:33:47
+product_use_printruns_022: 
+  name: "5"
+  updated_at: 2008-12-23 05:06:45
+  price: 
+  id: "22"
+  percentage: "20"
+  created_at: 2008-12-23 05:06:45
+product_use_printruns_011: 
+  name: "2,000,000"
+  updated_at: 2008-12-22 07:34:42
+  price: 
+  id: "11"
+  percentage: "100"
+  created_at: 2008-12-22 07:34:42
+product_use_printruns_023: 
+  name: "10"
+  updated_at: 2008-12-23 05:06:57
+  price: 
+  id: "23"
+  percentage: "40"
+  created_at: 2008-12-23 05:06:57
+product_use_printruns_012: 
+  name: "5,000,000"
+  updated_at: 2008-12-22 07:35:14
+  price: 
+  id: "12"
+  percentage: "150"
+  created_at: 2008-12-22 07:35:14
+product_use_printruns_001: 
+  name: "1,000"
+  updated_at: 2008-12-22 07:31:01
+  price: 
+  id: "1"
+  percentage: "0.01"
+  created_at: 2008-12-22 07:31:01
+product_use_printruns_024: 
+  name: "10"
+  updated_at: 2008-12-23 05:07:13
+  price: 
+  id: "24"
+  percentage: "60"
+  created_at: 2008-12-23 05:07:13
+product_use_printruns_013: 
+  name: "10,000,000"
+  updated_at: 2008-12-22 07:35:38
+  price: 
+  id: "13"
+  percentage: 
+  created_at: 2008-12-22 07:35:38
+product_use_printruns_002: 
+  name: "2,500"
+  updated_at: 2008-12-22 07:31:15
+  price: 
+  id: "2"
+  percentage: 
+  created_at: 2008-12-22 07:31:15
+product_use_printruns_025: 
+  name: "50"
+  updated_at: 2008-12-23 05:07:26
+  price: 
+  id: "25"
+  percentage: "60"
+  created_at: 2008-12-23 05:07:26
+product_use_printruns_014: 
+  name: "25,000,000"
+  updated_at: 2008-12-22 07:35:54
+  price: 
+  id: "14"
+  percentage: 
+  created_at: 2008-12-22 07:35:54
+product_use_printruns_003: 
+  name: "5,000"
+  updated_at: 2008-12-23 09:07:14
+  price: 
+  id: "3"
+  percentage: 
+  created_at: 2008-12-22 07:31:28
+product_use_printruns_026: 
+  name: "100"
+  updated_at: 2008-12-23 05:08:24
+  price: 
+  id: "26"
+  percentage: "80"
+  created_at: 2008-12-23 05:08:24
+product_use_printruns_015: 
+  name: Unlimited
+  updated_at: 2008-12-22 07:36:20
+  price: 
+  id: "15"
+  percentage: "225"
+  created_at: 2008-12-22 07:36:20
+product_use_printruns_004: 
+  name: "10,000"
+  updated_at: 2008-12-22 07:31:50
+  price: 
+  id: "4"
+  percentage: "8"
+  created_at: 2008-12-22 07:31:50
+product_use_printruns_027: 
+  name: "500"
+  updated_at: 2008-12-23 05:08:42
+  price: 
+  id: "27"
+  percentage: "100"
+  created_at: 2008-12-23 05:08:42
+product_use_printruns_016: 
+  name: "1"
+  updated_at: 2008-12-23 04:59:28
+  price: 
+  id: "16"
+  percentage: "0.01"
+  created_at: 2008-12-23 04:59:28
+product_use_printruns_005: 
+  name: "25,000"
+  updated_at: 2008-12-22 07:32:13
+  price: 
+  id: "5"
+  percentage: "11.5"
+  created_at: 2008-12-22 07:32:13
+product_use_printruns_028: 
+  name: "1000"
+  updated_at: 2008-12-23 05:08:56
+  price: 
+  id: "28"
+  percentage: "120"
+  created_at: 2008-12-23 05:08:56
+product_use_printruns_017: 
+  name: "5"
+  updated_at: 2008-12-23 04:59:54
+  price: 
+  id: "17"
+  percentage: "18.8"
+  created_at: 2008-12-23 04:59:54
+product_use_printruns_006: 
+  name: "50,000"
+  updated_at: 2008-12-22 07:32:30
+  price: 
+  id: "6"
+  percentage: "19.7"
+  created_at: 2008-12-22 07:32:30
+product_use_printruns_018: 
+  name: "10"
+  updated_at: 2008-12-23 05:00:23
+  price: 
+  id: "18"
+  percentage: "28"
+  created_at: 2008-12-23 05:00:23
+product_use_printruns_007: 
+  name: "100,000"
+  updated_at: 2008-12-22 07:32:53
+  price: 
+  id: "7"
+  percentage: "29.9"
+  created_at: 2008-12-22 07:32:53
+product_use_printruns_020: 
+  name: "100"
+  updated_at: 2008-12-23 05:01:33
+  price: 
+  id: "20"
+  percentage: "55.15"
+  created_at: 2008-12-23 05:01:33
+product_use_printruns_019: 
+  name: "50"
+  updated_at: 2008-12-23 05:00:58
+  price: 
+  id: "19"
+  percentage: "46.1"
+  created_at: 2008-12-23 05:00:58
+product_use_printruns_008: 
+  name: "250,000"
+  updated_at: 2008-12-22 07:33:16
+  price: 
+  id: "8"
+  percentage: "42"
+  created_at: 2008-12-22 07:33:16

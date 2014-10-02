@@ -1,0 +1,18 @@
+<h1>Listing price_medias</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for price_media in @price_medias %>
+  <tr>
+    <td><%= link_to 'Show', price_media %></td>
+    <td><%= link_to 'Edit', edit_price_media_path(price_media) %></td>
+    <td><%= link_to 'Destroy', price_media, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New price_media', new_price_media_path %>

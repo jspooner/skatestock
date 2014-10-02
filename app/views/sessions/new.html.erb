@@ -1,0 +1,27 @@
+<h1>Sign In</h1>
+<fieldset>
+<% form_tag session_path do -%>
+<ul class="form">
+	<li><label for="login">Login</label><br/>
+	<%= text_field_tag 'login' %></li>
+
+	<li><label for="password">Password</label><br/>
+	<%= password_field_tag 'password' %></li>
+	<li class="remember_me">
+		<label for="remember_me">Remember me:</label>
+		<%= check_box_tag 'remember_me' %>
+	</li>
+</ul>
+<div class="clear"></div>
+<p><%= submit_tag 'Sign in' %></p>
+<% end -%>
+<p class="forgot_password"><a href="#">Forget your password?</a></p>
+</fieldset>
+<div id="no_account_box">
+	<h1>Don't have an account?</h1>
+	<p>That's okay.  Registration only takes a few moments, you can even connect your facebook account.
+	<%= link_to "Consumers Register here", consumer_signup_path %>.
+	<%= link_to "Photographers Register here", photographer_signup_path %>.
+	<%= link_to "Riders Register here", rider_signup_path %>.
+ </p>
+</div>

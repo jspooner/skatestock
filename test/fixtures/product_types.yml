@@ -1,0 +1,145 @@
+--- 
+product_types_017: 
+  name: Indoor - Large (5 ft sq and larger)
+  updated_at: 2008-12-23 08:53:22
+  price: 
+  product_category_id: "2"
+  id: "17"
+  percentage: "29.3"
+  created_at: 2008-12-23 08:52:08
+product_types_006: 
+  name: Editorial Newpaper
+  updated_at: 2008-12-22 06:46:38
+  price: 
+  product_category_id: "4"
+  id: "6"
+  percentage: "34"
+  created_at: 2008-12-22 06:46:38
+product_types_018: 
+  name: Indoor - Small (under 5 ft sq)
+  updated_at: 2008-12-23 08:53:00
+  price: 
+  product_category_id: "2"
+  id: "18"
+  percentage: "0.01"
+  created_at: 2008-12-23 08:53:00
+product_types_007: 
+  name: Editorial Web or Electronic
+  updated_at: 2008-12-22 06:47:16
+  price: 
+  product_category_id: "4"
+  id: "7"
+  percentage: "0.01"
+  created_at: 2008-12-22 06:47:16
+product_types_008: 
+  name: Editorial Documentary Program
+  updated_at: 2008-12-22 06:47:38
+  price: 
+  product_category_id: "4"
+  id: "8"
+  percentage: "267"
+  created_at: 2008-12-22 06:47:38
+product_types_010: 
+  name: Internal Brochure - Handouts and Displays
+  updated_at: 2008-12-22 07:38:17
+  price: 
+  product_category_id: "3"
+  id: "10"
+  percentage: "25"
+  created_at: 2008-12-22 07:38:17
+product_types_009: 
+  name: Editorial News, Parody, Talk Commentary
+  updated_at: 2008-12-22 06:48:44
+  price: 
+  product_category_id: "4"
+  id: "9"
+  percentage: "234"
+  created_at: 2008-12-22 06:48:44
+product_types_011: 
+  name: Internal Presentations
+  updated_at: 2008-12-22 07:38:33
+  price: 
+  product_category_id: "3"
+  id: "11"
+  percentage: "0.01"
+  created_at: 2008-12-22 07:38:33
+product_types_012: 
+  name: Internal Communication, Email, Intranet, Extranet,
+  updated_at: 2008-12-22 07:40:24
+  price: 
+  product_category_id: "3"
+  id: "12"
+  percentage: "25"
+  created_at: 2008-12-22 07:40:24
+product_types_001: 
+  name: Web Banner
+  updated_at: 2008-12-21 07:00:06
+  price: 
+  product_category_id: "1"
+  id: "1"
+  percentage: "0.2"
+  created_at: 2008-12-21 07:00:06
+product_types_013: 
+  name: CD - DVD - Video
+  updated_at: 2008-12-22 07:40:53
+  price: 
+  product_category_id: "3"
+  id: "13"
+  percentage: "100"
+  created_at: 2008-12-22 07:40:53
+product_types_002: 
+  name: Magazine Interior
+  updated_at: 2008-12-22 06:39:03
+  price: 
+  product_category_id: "4"
+  id: "2"
+  percentage: "140"
+  created_at: 2008-12-21 07:16:35
+product_types_014: 
+  name: Wall Decor
+  updated_at: 2008-12-22 07:41:10
+  price: 
+  product_category_id: "3"
+  id: "14"
+  percentage: "220"
+  created_at: 2008-12-22 07:41:10
+product_types_003: 
+  name: Editorial Magazine Cover
+  updated_at: 2008-12-22 06:39:47
+  price: 
+  product_category_id: "4"
+  id: "3"
+  percentage: "427"
+  created_at: 2008-12-22 06:39:47
+product_types_015: 
+  name: Outdoor - Large (100 ft sq and larger)
+  updated_at: 2008-12-23 08:50:59
+  price: 
+  product_category_id: "2"
+  id: "15"
+  percentage: "112.2"
+  created_at: 2008-12-23 08:50:59
+product_types_004: 
+  name: Editorial Custom Published Magazine
+  updated_at: 2008-12-22 06:45:27
+  price: 
+  product_category_id: "4"
+  id: "4"
+  percentage: "200"
+  created_at: 2008-12-22 06:45:27
+product_types_016: 
+  name: Outdoor - Small (under 100 ft sq)
+  updated_at: 2008-12-23 08:51:33
+  price: 
+  product_category_id: "2"
+  id: "16"
+  percentage: "108.5"
+  created_at: 2008-12-23 08:51:33
+product_types_005: 
+  name: Editorial Science or Academic Journal
+  updated_at: 2008-12-22 06:46:13
+  price: 
+  product_category_id: "4"
+  id: "5"
+  percentage: "67"
+  created_at: 2008-12-22 06:46:13

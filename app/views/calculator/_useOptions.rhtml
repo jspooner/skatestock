@@ -1,0 +1,33 @@
+<%= @type %>
+	<p>
+		<%= label_tag :use_size, "Size"  %>
+		<%= select  'line_item', :use_size, @sizes.collect { |o| o.name } %>
+	</p>
+	<p>
+		<%= label_tag :use_printrun, "Print Run"  %>
+		<%= select  'line_items', :use_printrun, @printruns.collect { |o| o.name } %>
+	</p>
+	<p>
+		<%= label_tag :use_placement, "Placement"  %>
+		<%= select 'line_item', :use_placement, @placements.collect { |o| o.name } %>
+	</p>
+		
+	<p> 
+		<%= label_tag :use_duration, "Duration"  %>
+		<%= select 'line_item', :use_duration, @durations.collect { |o| o.name }  %>
+	</p>		
+	<p> 
+		<%= label_tag :use_distribution, "Territory"  %>
+		<%= country_select 'line_item', :use_distribution, ["Select "], {"United States" => :selected} %>
+	</p>	
+	<p>
+		<%= label_tag :use_industry, "Industry"  %>
+		<%= select 'line_item', :use_industry, @industry.collect { |o| [o.name,o.name] } %>
+	</p>	
+
+  <p>
+	<input id="line_item_calc" onclick="javascript:calculatePrice()" value="Calculate Price" type="button">
+  </p>
+
+
+

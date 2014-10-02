@@ -1,0 +1,640 @@
+--- 
+price_medias_067: 
+  is_editorial: "1"
+  name: Book - Trade Book
+  updated_at: 2009-04-18 22:41:49
+  price: "60"
+  id: "70"
+  price_usage_id: "9"
+  percentage: 
+  created_at: 2009-04-18 22:41:49
+price_medias_004: 
+  is_editorial: "1"
+  name: Outdoor - Large (100 sq ft or larger)
+  updated_at: 2009-04-18 22:00:40
+  price: "460"
+  id: "7"
+  price_usage_id: "3"
+  percentage: 
+  created_at: 2008-12-31 07:24:12
+price_medias_025: 
+  is_editorial: "1"
+  name: Product Packaging
+  updated_at: 2009-04-18 22:04:21
+  price: "545"
+  id: "28"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:04:21
+price_medias_046: 
+  is_editorial: "1"
+  name: Promotional Calendar
+  updated_at: 2009-04-18 22:19:46
+  price: "440"
+  id: "49"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:19:46
+price_medias_068: 
+  is_editorial: "1"
+  name: Test Booklet
+  updated_at: 2009-04-18 22:42:09
+  price: "0"
+  id: "71"
+  price_usage_id: "9"
+  percentage: 
+  created_at: 2009-04-18 22:42:09
+price_medias_005: 
+  is_editorial: "1"
+  name: Web Advertisement Banner
+  updated_at: 2009-01-07 06:02:18
+  price: "0"
+  id: "8"
+  price_usage_id: "1"
+  percentage: "0"
+  created_at: 2009-01-07 06:02:18
+price_medias_026: 
+  is_editorial: "1"
+  name: Product Hangtags
+  updated_at: 2009-04-18 22:06:27
+  price: "1295"
+  id: "29"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:06:27
+price_medias_047: 
+  is_editorial: "1"
+  name: Promotional Greeting Card
+  updated_at: 2009-04-18 22:20:08
+  price: "95"
+  id: "50"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:20:08
+price_medias_070: 
+  is_editorial: "1"
+  name: Museum Electronic Kiosk or Display
+  updated_at: 2009-04-18 22:43:20
+  price: "75"
+  id: "73"
+  price_usage_id: "10"
+  percentage: 
+  created_at: 2009-04-18 22:43:20
+price_medias_069: 
+  is_editorial: "1"
+  name: Museum or Gallery Exhibit
+  updated_at: 2009-04-18 22:43:02
+  price: "0"
+  id: "72"
+  price_usage_id: "10"
+  percentage: 
+  created_at: 2009-04-18 22:43:02
+price_medias_006: 
+  is_editorial: "1"
+  name: Web Video Ad
+  updated_at: 2009-01-07 06:02:47
+  price: "130"
+  id: "9"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2009-01-07 06:02:47
+price_medias_027: 
+  is_editorial: "1"
+  name: CD, Video DVD, VHS Packaging
+  updated_at: 2009-04-18 22:07:00
+  price: "175"
+  id: "30"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:07:00
+price_medias_048: 
+  is_editorial: "1"
+  name: Promtional CD/DVD/Video
+  updated_at: 2009-04-18 22:20:36
+  price: "40"
+  id: "51"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:20:36
+price_medias_071: 
+  is_editorial: "1"
+  name: Live Theatrical Performance
+  updated_at: 2009-04-18 22:43:33
+  price: "75"
+  id: "74"
+  price_usage_id: "10"
+  percentage: 
+  created_at: 2009-04-18 22:43:33
+price_medias_028: 
+  is_editorial: "1"
+  name: Computer Games, Software, CD-Rom
+  updated_at: 2009-04-18 22:07:21
+  price: "25"
+  id: "31"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:07:21
+price_medias_050: 
+  is_editorial: "1"
+  name: Magazine Ad
+  updated_at: 2009-04-18 22:23:38
+  price: "255"
+  id: "53"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:23:38
+price_medias_049: 
+  is_editorial: "1"
+  name: Travel Brochure
+  updated_at: 2009-04-18 22:20:52
+  price: "40"
+  id: "52"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:20:37
+price_medias_007: 
+  is_editorial: "1"
+  name: Promotional Software
+  updated_at: 2009-01-07 06:03:06
+  price: "100"
+  id: "10"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2009-01-07 06:03:06
+price_medias_008: 
+  is_editorial: "1"
+  name: Mobile Device Advertisement
+  updated_at: 2009-01-07 06:03:39
+  price: "75"
+  id: "11"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2009-01-07 06:03:39
+price_medias_030: 
+  is_editorial: "1"
+  name: Apparel
+  updated_at: 2009-04-18 22:08:03
+  price: "310"
+  id: "33"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:08:03
+price_medias_029: 
+  is_editorial: "1"
+  name: Electronic Greeting Cards
+  updated_at: 2009-04-18 22:07:40
+  price: "125"
+  id: "32"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:07:40
+price_medias_051: 
+  is_editorial: "1"
+  name: Newspaper Ad
+  updated_at: 2009-04-18 22:24:02
+  price: "205"
+  id: "54"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:24:02
+price_medias_010: 
+  is_editorial: "1"
+  name: Video Game Advertisement
+  updated_at: 2009-01-07 06:04:11
+  price: "100"
+  id: "13"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2009-01-07 06:04:11
+price_medias_009: 
+  is_editorial: "1"
+  name: Webisode
+  updated_at: 2009-01-07 06:03:55
+  price: "45"
+  id: "12"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2009-01-07 06:03:55
+price_medias_031: 
+  is_editorial: "1"
+  name: Cards, Bank, Credit, Debit, ATM
+  updated_at: 2009-04-18 22:08:24
+  price: "270"
+  id: "34"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:08:24
+price_medias_052: 
+  is_editorial: "1"
+  name: Catalog Ad
+  updated_at: 2009-04-18 22:24:23
+  price: "255"
+  id: "55"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:24:23
+price_medias_011: 
+  is_editorial: "1"
+  name: Editorial Custom Publication Magazine
+  updated_at: 2009-04-18 21:43:16
+  price: "150"
+  id: "14"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:41:26
+price_medias_032: 
+  is_editorial: "1"
+  name: Cards Phone, Transit, Other
+  updated_at: 2009-04-18 22:08:59
+  price: "260"
+  id: "35"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:08:59
+price_medias_053: 
+  is_editorial: "1"
+  name: Removable Insert
+  updated_at: 2009-04-18 22:24:40
+  price: "255"
+  id: "56"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:24:40
+price_medias_012: 
+  is_editorial: "1"
+  name: Editorial Science/Academic Journal
+  updated_at: 2009-04-18 21:48:49
+  price: "50"
+  id: "15"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:43:06
+price_medias_033: 
+  is_editorial: "1"
+  name: Cards Trading or Game
+  updated_at: 2009-04-18 22:09:26
+  price: "0"
+  id: "36"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:09:26
+price_medias_054: 
+  is_editorial: "1"
+  name: Event Program
+  updated_at: 2009-04-18 22:24:51
+  price: "40"
+  id: "57"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:24:51
+price_medias_013: 
+  is_editorial: "1"
+  name: Editorial Newspaper
+  updated_at: 2009-04-18 21:48:58
+  price: "25"
+  id: "16"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:43:35
+price_medias_034: 
+  is_editorial: "1"
+  name: "Retail: Postcard, Greeting, Holiday"
+  updated_at: 2009-04-18 22:10:22
+  price: "345"
+  id: "37"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:10:22
+price_medias_055: 
+  is_editorial: "1"
+  name: Avertorial
+  updated_at: 2009-04-18 22:25:08
+  price: "0"
+  id: "58"
+  price_usage_id: "7"
+  percentage: 
+  created_at: 2009-04-18 22:25:08
+price_medias_014: 
+  is_editorial: "1"
+  name: Editorial Web/Electronic
+  updated_at: 2009-04-18 21:49:13
+  price: "0"
+  id: "17"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:44:04
+price_medias_035: 
+  is_editorial: "1"
+  name: "Retail: Calendar"
+  updated_at: 2009-04-18 22:10:53
+  price: "220"
+  id: "38"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:10:53
+price_medias_056: 
+  is_editorial: "1"
+  name: Entertainment Program
+  updated_at: 2009-04-18 22:31:46
+  price: "135"
+  id: "59"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:31:46
+price_medias_015: 
+  is_editorial: "1"
+  name: Editorial Documentary Program
+  updated_at: 2009-04-18 21:49:22
+  price: "200"
+  id: "18"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:44:59
+price_medias_036: 
+  is_editorial: "1"
+  name: "Retail: Print/Posters"
+  updated_at: 2009-04-18 22:11:20
+  price: "410"
+  id: "39"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:11:20
+price_medias_057: 
+  is_editorial: "1"
+  name: Webisode
+  updated_at: 2009-04-18 22:34:08
+  price: "0"
+  id: "60"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:34:08
+price_medias_016: 
+  is_editorial: "1"
+  name: Editorial News or Parody News
+  updated_at: 2009-04-18 21:49:33
+  price: "175"
+  id: "19"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2009-04-18 21:45:46
+price_medias_037: 
+  is_editorial: "1"
+  name: "Retail: Stationery"
+  updated_at: 2009-04-18 22:15:41
+  price: "455"
+  id: "40"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:15:41
+price_medias_058: 
+  is_editorial: "1"
+  name: TV - Commercial
+  updated_at: 2009-04-18 22:34:25
+  price: "635"
+  id: "61"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:34:25
+price_medias_017: 
+  is_editorial: "1"
+  name: Outdoor Display Small (less than 100 sq ft)
+  updated_at: 2009-04-18 22:00:20
+  price: "445"
+  id: "20"
+  price_usage_id: "3"
+  percentage: 
+  created_at: 2009-04-18 21:48:15
+price_medias_038: 
+  is_editorial: "1"
+  name: "Retail: Novelty, Specialty, Miscellaneous Item"
+  updated_at: 2009-04-18 22:16:15
+  price: "495"
+  id: "41"
+  price_usage_id: "5"
+  percentage: 
+  created_at: 2009-04-18 22:16:15
+price_medias_060: 
+  is_editorial: "1"
+  name: TV On Air Promotion
+  updated_at: 2009-04-18 22:35:56
+  price: "195"
+  id: "63"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:35:56
+price_medias_059: 
+  is_editorial: "1"
+  name: TV - Informercial
+  updated_at: 2009-04-18 22:35:22
+  price: "315"
+  id: "62"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:35:22
+price_medias_039: 
+  is_editorial: "1"
+  name: Print Brochure
+  updated_at: 2009-04-18 22:18:01
+  price: "145"
+  id: "42"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:18:01
+price_medias_061: 
+  is_editorial: "1"
+  name: Cinema Advertising
+  updated_at: 2009-04-18 22:38:44
+  price: "150"
+  id: "64"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:38:44
+price_medias_018: 
+  is_editorial: "1"
+  name: Indoor Display Large (5 sq ft or larger)
+  updated_at: 2009-04-18 22:00:54
+  price: "120"
+  id: "21"
+  price_usage_id: "3"
+  percentage: 
+  created_at: 2009-04-18 21:51:43
+price_medias_040: 
+  is_editorial: "1"
+  name: Postcard/ Flyer
+  updated_at: 2009-04-18 22:18:15
+  price: "135"
+  id: "43"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:18:15
+price_medias_020: 
+  is_editorial: "1"
+  name: Internal Brochure - Handout or Display
+  updated_at: 2009-04-18 22:02:01
+  price: "25"
+  id: "23"
+  price_usage_id: "4"
+  percentage: 
+  created_at: 2009-04-18 22:02:01
+price_medias_019: 
+  is_editorial: "1"
+  name: Indoor Display Small (less than 5 sq ft)
+  updated_at: 2009-04-18 22:01:09
+  price: "0"
+  id: "22"
+  price_usage_id: "3"
+  percentage: 
+  created_at: 2009-04-18 21:52:40
+price_medias_041: 
+  is_editorial: "1"
+  name: Web Brochure
+  updated_at: 2009-04-18 22:18:27
+  price: "95"
+  id: "44"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:18:27
+price_medias_062: 
+  is_editorial: "1"
+  name: Feature Film
+  updated_at: 2009-04-18 22:39:25
+  price: "70"
+  id: "65"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:39:25
+price_medias_021: 
+  is_editorial: "1"
+  name: Internal Presentation
+  updated_at: 2009-04-18 22:02:17
+  price: "0"
+  id: "24"
+  price_usage_id: "4"
+  percentage: 
+  created_at: 2009-04-18 22:02:17
+price_medias_042: 
+  is_editorial: "1"
+  name: Annual/Quarterly Report
+  updated_at: 2009-04-18 22:18:47
+  price: "245"
+  id: "45"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:18:47
+price_medias_063: 
+  is_editorial: "1"
+  name: DVD Bonus Material
+  updated_at: 2009-04-18 22:39:50
+  price: "135"
+  id: "66"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:39:50
+price_medias_001: 
+  is_editorial: "1"
+  name: Web - Corporate/Promotion
+  updated_at: 2009-01-07 06:01:03
+  price: "0"
+  id: "1"
+  price_usage_id: "1"
+  percentage: "0"
+  created_at: 2008-12-31 07:05:30
+price_medias_022: 
+  is_editorial: "1"
+  name: Internal Communication, Email, Intranet
+  updated_at: 2009-04-18 22:02:45
+  price: "25"
+  id: "25"
+  price_usage_id: "4"
+  percentage: 
+  created_at: 2009-04-18 22:02:45
+price_medias_043: 
+  is_editorial: "1"
+  name: Newsletters
+  updated_at: 2009-04-18 22:19:02
+  price: "15"
+  id: "46"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:19:02
+price_medias_064: 
+  is_editorial: "1"
+  name: Made For TV or DVD
+  updated_at: 2009-04-18 22:40:18
+  price: "35"
+  id: "67"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:40:18
+price_medias_002: 
+  is_editorial: "1"
+  name: Email/Electronic Direct Promotion
+  updated_at: 2009-01-07 06:01:48
+  price: "25"
+  id: "3"
+  price_usage_id: "1"
+  percentage: 
+  created_at: 2008-12-31 07:11:52
+price_medias_023: 
+  is_editorial: "1"
+  name: Internal CD, DVD, Video
+  updated_at: 2009-04-18 22:03:09
+  price: "100"
+  id: "26"
+  price_usage_id: "4"
+  percentage: 
+  created_at: 2009-04-18 22:03:09
+price_medias_044: 
+  is_editorial: "1"
+  name: Press Release
+  updated_at: 2009-04-18 22:19:15
+  price: "15"
+  id: "47"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:19:15
+price_medias_065: 
+  is_editorial: "1"
+  name: Music Video
+  updated_at: 2009-04-18 22:40:30
+  price: "135"
+  id: "68"
+  price_usage_id: "8"
+  percentage: 
+  created_at: 2009-04-18 22:40:30
+price_medias_003: 
+  is_editorial: "1"
+  name: Magazine Interior
+  updated_at: 2009-04-23 03:20:00
+  price: "105"
+  id: "4"
+  price_usage_id: "2"
+  percentage: 
+  created_at: 2008-12-31 07:13:38
+price_medias_024: 
+  is_editorial: "1"
+  name: Wall Decor
+  updated_at: 2009-04-18 22:03:22
+  price: "220"
+  id: "27"
+  price_usage_id: "4"
+  percentage: 
+  created_at: 2009-04-18 22:03:22
+price_medias_045: 
+  is_editorial: "1"
+  name: External Presentation
+  updated_at: 2009-04-18 22:19:31
+  price: "95"
+  id: "48"
+  price_usage_id: "6"
+  percentage: 
+  created_at: 2009-04-18 22:19:31
+price_medias_066: 
+  is_editorial: "1"
+  name: Book - Textbook
+  updated_at: 2009-04-18 22:41:58
+  price: "40"
+  id: "69"
+  price_usage_id: "9"
+  percentage: 
+  created_at: 2009-04-18 22:41:27

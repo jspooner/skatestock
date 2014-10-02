@@ -1,0 +1,161 @@
+<h1>Listing Product Categories</h1>
+
+<table>
+	<tr>
+		<th>id</th>
+		<th>name</th>
+		<th>base price</th>
+		<th>price</th>
+		<th>percentage</th>
+		<th></th>
+		<th></th>
+	</tr>
+<% for product_category in @product_category %>
+  <tr class="product_category">
+    <td><%= product_category.id.to_s %></td>
+		<td><%= product_category.name %> </td>
+		<td>$<%= product_category.price %></td>
+		<td></td>
+    <td></td>
+    <td><%= link_to 'Edit', edit_product_category_path(product_category) %></td>
+    <td><%= link_to 'Destroy', product_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+	
+	<tr class="product_type">
+		<td></td>
+		<td colspan="7"><strong>Types</strong></td>
+	</tr>
+	<% for product_type in product_category.product_types -%>
+	<tr class="product_type">
+			<td></td>
+			<td><%= product_type.name %> </td>
+			<td></td>
+			<td>$<%= product_type.price %></td>
+			<td><%= product_type.percentage %>%</td>
+	    <td><%= link_to 'Edit', edit_product_type_path(product_type) %></td>
+	    <td><%= link_to 'Destroy', product_type, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end -%>
+	
+	<tr class="product_type">
+		<td></td>
+		<td><%= link_to 'Add sub category', new_product_type_path + "?id=" + product_category.id.to_s %></td>
+		<td></td>
+		<td></td>
+		<td></td>	
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr class="product_placement">
+		<td></td>
+		<td colspan="7"><strong>Placements</strong></td>
+	</tr>
+	<% for placement in product_category.product_use_placements -%>
+	<tr class="product_placement">
+		<td></td>
+		<td><%= placement.name %></td>
+		<td></td>
+		<td>$<%= placement.price %></td>
+		<td><%= placement.percentage %></td>
+		<td><%= link_to 'Edit', edit_product_use_placement_path(placement) %></td>
+    <td><%= link_to 'Destroy', placement, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end -%>
+	
+	<tr class="product_placement">
+		<td></td>
+		<td><%= link_to "Add Placement", new_product_use_placement_path + "?id=" + product_category.id.to_s %></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+	<tr class="product_durations">
+		<td></td>
+		<td colspan="7"><strong>Durations</strong></td>
+	</tr>
+	<% for duration in product_category.product_use_durations -%>
+	<tr class="product_durations">
+		<td></td>
+		<td><%= duration.name %></td>
+		<td></td>
+		<td>$<%= duration.price %></td>
+		<td><%= duration.percentage %></td>
+		<td><%= link_to 'Edit', edit_product_use_duration_path(duration) %></td>
+    <td><%= link_to 'Destroy', placement, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end -%>
+	<tr class="product_durations">
+		<td></td>
+		<td><%= link_to "Add Duration", new_product_use_duration_path + "?id=" + product_category.id.to_s %></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	<tr class="product_sizes">
+		<td></td>
+		<td colspan="7"><strong>Sizes</strong></td>
+	</tr>
+	<% for size in product_category.product_use_sizes -%>
+	<tr class="product_sizes">
+		<td></td>
+		<td><%= size.name %></td>
+		<td></td>
+		<td>$<%= size.price %></td>
+		<td><%= size.percentage %></td>
+		<td><%= link_to 'Edit', edit_product_use_size_path(size) %></td>
+    <td><%= link_to 'Destroy', placement, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end -%>
+	<tr class="product_sizes">
+		<td></td>
+		<td><%= link_to "Add Size", new_product_use_size_path + "?id=" + product_category.id.to_s %></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+		
+	<tr class="product_run">
+		<td></td>
+		<td colspan="7"><strong>Print Run</strong></td>
+	</tr>
+	<% for print in product_category.product_use_printruns -%>
+	<tr class="product_run">
+		<td></td>
+		<td><%= print.name %></td>
+		<td></td>
+		<td>$<%= print.price %></td>
+		<td><%= print.percentage %></td>
+		<td><%= link_to 'Edit', edit_product_use_printrun_path(size) %></td>
+    <td><%= link_to 'Destroy', placement, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end -%>
+	<tr class="product_run">
+		<td></td>
+		<td><%= link_to "Add Print Run", new_product_use_printrun_path + "?id=" + product_category.id.to_s %></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	
+	
+	
+	
+	
+		
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_product_category_path %>

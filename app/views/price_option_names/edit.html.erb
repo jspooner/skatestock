@@ -1,0 +1,15 @@
+<h1>Editing price_option_name</h1>
+
+<% form_for(@price_option_name) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @price_option_name %> |
+<%= link_to 'Back', price_option_names_path %>

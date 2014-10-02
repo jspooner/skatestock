@@ -1,0 +1,81 @@
+
+<%= image_tag @image_shell.original.image.url(:thumb) %>
+
+<%= render :partial => 'image_shells/show_photographer.html.erb' %>
+
+<fieldset>
+	<legend>Description <%= link_to "edit", edit_image_shell_path(:image_shell_id => @image_shell) %></legend>
+	
+	<div class="column">
+		<strong>what</strong>
+		<p>
+		  <strong>Title:</strong>
+		  <%= @image_shell.description.title %>
+		</p>
+		<p>
+		  <strong>Description:</strong>
+		  <%= @image_shell.description.description %>
+		</p>
+		<p>
+		  <strong>Location:</strong>
+		  <%= @image_shell.description.location %>
+		</p>
+		<p>
+		  <strong>Obsticle:</strong>
+		  <%= @image_shell.description.obsticle %>
+		</p>
+		<p>
+		  <strong>Trick:</strong>
+		  <%= @image_shell.description.trick %>
+		</p>
+		<p>
+		  <strong>Color:</strong>
+		  <%= @image_shell.description.color %>
+		</p>
+	</div>
+		<div class="column">
+			<strong>who</strong>
+			<p>
+		    <strong>Riders:</strong>
+				<%= @image_shell.riders.collect { |r| "#{r.first_name} #{r.last_name}"}.join(", ") %><br/>
+				<span class="error_notice"><%= @image_shell.invitations.collect { |r| "#{r.first_name} #{r.last_name}"}.join(", ") %></span>
+		  </p>
+			<p>
+			  <strong>Gender:</strong>
+			  <%= @image_shell.description.gender %>
+			</p>
+			<p>
+			  <strong>People:</strong>
+			  <%= @image_shell.description.people %>
+			</p>
+			<p>
+			  <strong>Portrait:</strong>
+			  <%= @image_shell.description.portrait %>
+			</p>
+			<p>
+			  <strong>Age:</strong>
+			  <%= @image_shell.description.age %>
+			</p>
+		</div>
+		<div class="column">
+			<strong>where</strong>
+			<p>
+			  <strong>State:</strong>
+			  <%= @image_shell.description.state %>
+			</p>
+			<p>
+			  <strong>City:</strong>
+			  <%= @image_shell.description.city %>
+			</p>
+		</div>
+</fieldset>
+
+
+
+
+
+<p>
+  <%= link_to "Edit", edit_image_shell_path(@image_shell) %> |
+  <%= link_to "Destroy", @image_shell, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All Images", image_shells_path %>
+</p>

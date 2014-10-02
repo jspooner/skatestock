@@ -1,0 +1,64 @@
+--- 
+product_use_durations_003: 
+  name: Three Months
+  updated_at: 2008-12-23 09:02:16
+  price: 
+  id: "3"
+  percentage: "80"
+  created_at: 2008-12-22 07:27:32
+product_use_durations_004: 
+  name: Six Months
+  updated_at: 2008-12-23 09:02:23
+  price: 
+  id: "4"
+  percentage: "100"
+  created_at: 2008-12-22 07:27:50
+product_use_durations_005: 
+  name: Nine Months
+  updated_at: 2008-12-23 09:02:31
+  price: 
+  id: "5"
+  percentage: "110"
+  created_at: 2008-12-22 07:28:16
+product_use_durations_006: 
+  name: One Year
+  updated_at: 2008-12-23 09:03:00
+  price: 
+  id: "6"
+  percentage: "120"
+  created_at: 2008-12-22 07:28:28
+product_use_durations_007: 
+  name: Two Years
+  updated_at: 2008-12-23 09:02:42
+  price: 
+  id: "7"
+  percentage: "180"
+  created_at: 2008-12-22 07:28:38
+product_use_durations_008: 
+  name: Three Years
+  updated_at: 2008-12-23 09:03:14
+  price: 
+  id: "8"
+  percentage: "233"
+  created_at: 2008-12-22 07:29:01
+product_use_durations_009: 
+  name: Five Years
+  updated_at: 2008-12-23 09:03:30
+  price: 
+  id: "9"
+  percentage: "350"
+  created_at: 2008-12-22 07:30:14
+product_use_durations_001: 
+  name: One Week
+  updated_at: 2008-12-23 09:01:56
+  price: 
+  id: "1"
+  percentage: "0.01"
+  created_at: 2008-12-22 07:26:51
+product_use_durations_002: 
+  name: One Month
+  updated_at: 2008-12-23 09:02:04
+  price: 
+  id: "2"
+  percentage: "47"
+  created_at: 2008-12-22 07:27:16

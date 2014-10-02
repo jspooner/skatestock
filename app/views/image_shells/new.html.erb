@@ -1,0 +1,91 @@
+<%= error_messages_for :image_shell %>
+
+<% form_for(@image_shell, :html => { :multipart => true }) do |f| %>
+
+  <%= f.hidden_field :user_id %>
+	<%= hidden_field "stock_request", "value", :value => 1  %>
+	<%= f.hidden_field "stock_base_price", :value => 0  %>
+	<%= f.hidden_field "editorial_base_price", :value => 0  %>
+	<%= f.hidden_field "private_base_price", :value => 0  %>
+	
+
+		<fieldset>
+			<legend>Upload</legend>
+			
+			<h3>Photographer's requirements for public stock submissions.</h3>
+
+			<ol>
+				<li>Files must be flattened with no additional layers between 48-54 Megabytes</li>
+				<li>8 bit color</li>
+				<li>Retouch out all dust spots. Watch for dust in blue skies and other solid colors throughout photo</li>
+				<li>Retouch out any logos for stock submissions. Logos are acceptable for editorial submissions but are limited in saleability.</li>
+				<li>Images must be 300 dpi</li>
+				<li>No color shifts. Neutralize colors unless it is specific affect.
+					<ul>
+						<li>No clipped channels or colors including luminosity.</li>
+					</ul>
+				</li>
+				<li>Contrast should be normal for standard reproduction.  </li>
+				<li>Set color space to Adobe RGB 1998
+					<ul>
+						<li>Make sure to embed color profile in image</li>
+					</ul>
+				</li>
+				<li>When saving as a tiff follow these settings
+					<ul><li>No image compression</li>
+					<li>pixel order: interleaved (RGBRGB)</li>
+					<li>Byte Order: IBM PC</li>
+					<li>No save as image pyramid</li></ul></li>
+			</ol>
+			
+			<% fields_for "original", @image_shell.original do |original_form| -%>
+			<p>
+				<label for="original">Image File:</label>
+				<%= original_form.file_field :image %>
+			</p>
+			<% end -%>
+		</fieldset>	
+
+<% if @stock_request != nil %>
+	<fieldset>
+		<legend>Sale Status</legend>
+		<ol>
+			<li>
+					<%= "Stock approved" if @stock_request.approved?  %>
+					<%= "Stock denied" if @stock_request.denied?  %>
+					<%= "Pending our approval for stock." if @stock_request.new? || @stock_request.action_taken?  %>
+			</li>
+		</ol>
+	</fieldset>
+<% end %>
+<% if @image_shell.requires_photographer_action -%>
+	<%= link_to '<span class="action_required">action required</span>Needs Modifications', image_shell_requests_path(@image_shell) %>	
+	<%= @stock_request.message if @stock_request.action_needed?  %>
+<% end -%>
+	
+	
+<% if current_user.is_admin -%>
+	<fieldset>
+		<legend>Sale Options</legend>
+	  <p>
+	    <%= f.label :stock_base_price %><br />
+	    <%= f.text_field :stock_base_price %>
+	  </p>
+	</fieldset>
+<% else -%>
+		<% if @stock_request == nil %>
+			
+		<% else -%>
+			
+			<%= "Stock approved" if @stock_request.approved?  %>
+			<%= "Stock denied" if @stock_request.denied?  %>
+			<%= "Pending our approval for stock." if @stock_request.new? || @stock_request.action_taken?  %>
+		<% end -%>	
+				
+<% end -%>
+
+<%= render :partial => 'metadata_form', :locals => { :riders => @riders } %>
+
+	
+  <p><%= f.submit "Submit" %></p>
+<% end %>

@@ -1,0 +1,2 @@
+module ProductUseDurationsHelper
+end

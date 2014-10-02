@@ -1,0 +1,6 @@
+
+<% if @options != nil %>
+	<span>Select a medium:</span> <%= select 'line_item','price_media', [["Select One",-1]] + @options, {}, {:onchange => "javascript:onTypeChange()"} %>
+<% else %>
+
+<% end %>

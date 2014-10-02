@@ -1,0 +1,25 @@
+<h2>New <%= @price_option.option %> > <%= @price_media.name %> > <%= @price_media.price_usage.name %></h2>
+
+<% form_for(@price_option) do |f| %>
+  <%= f.error_messages %>
+	<%= f.hidden_field :option %>
+	<%= f.hidden_field :price_media_id %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>
+  <p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', price_options_path %>

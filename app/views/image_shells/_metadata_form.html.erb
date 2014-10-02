@@ -1,0 +1,98 @@
+	<fieldset>
+		<legend>Metadata</legend>
+		<% prefix = "description" %>
+		<% fields_for prefix, @image_shell.description do |description_form| -%>
+		<div class="column">
+			<strong>what</strong>
+			<p>
+		    <%= description_form.label :title %><br />
+		    <%= description_form.text_field :title %>
+		  </p>
+			<p>
+		    <%= description_form.label :description %><br />
+		    <%= description_form.text_field :description %>
+		  </p>
+		  <p>
+		    <%= description_form.label :obstacle %><br />
+		    <%= description_form.text_field :obsticle %>
+		  </p>
+		  <p>
+		    <%= description_form.label :trick %><br />
+		    <%= description_form.text_field :trick %>
+		  </p>
+		  <p>
+		    <%= description_form.label :color %><br />
+		    <%= description_form.text_field :color %>
+		  </p>
+		</div>
+			<div class="column">
+				<strong>who</strong><br/><br/>
+
+				<% fields_for "riders", @image_shell.riders do |rider_form| %>
+				
+			    <%= rider_form.label :riders %> 
+					<ul class="first acfb-holder">
+						<% @image_shell.riders.each do |r| -%>
+							<li class="acfb-data"><span><%= "#{r.first_name} #{r.last_name}" %></span> <img class="p" src="/images/delete.gif"/></li>
+						<% end -%>
+						<% @image_shell.invitations.each do |r| -%>
+							<li class="acfb-data"><span><%= "#{r.first_name} #{r.last_name}" %></span> <img class="p" src="/images/delete.gif"/></li>
+						<% end -%>
+						<%= rider_form.text_field :ridersnames, :value => "", :autocomplete => :off, :class => "city acfb-input" %>
+						<%= rider_form.hidden_field :riders, :value => "", :autocomplete => :off %>
+					</ul>
+
+			 <% end %>
+				<p>
+			    <%= description_form.label :gender %><br />
+			    <%= description_form.text_field :gender %>
+			  </p>
+			  <p>
+			    <%= description_form.label :people, "Number of people in photograph" %><br />
+			    <%= description_form.text_field :people %>
+			  </p>
+			  <p>
+			    <%= description_form.label :portrait %><br />
+			    <%= description_form.check_box :portrait %>
+			  </p>
+			  <p>
+			    <%= description_form.label :age %><br />
+			    <%= description_form.text_field :age %>
+			  </p>
+			</div>
+			<div class="column">
+				<strong>where</strong>
+				<p>
+			    <%= description_form.label :location %><br />
+			    <%= description_form.text_field :location %>
+			  </p>
+				<p>
+			    <%= description_form.label :state %><br />
+			    <%= description_form.text_field :state %>
+			  </p>
+			  <p>
+			    <%= description_form.label :city %><br />
+			    <%= description_form.text_field :city %>
+			  </p>
+			</div>
+		<% end -%>
+	</fieldset>
+<% 
+names = []
+names.concat( riders.collect { |i| "#{i.first_name} #{i.last_name}" } ) if riders
+names.concat(@image_shell.invitations.collect { |i| "#{i.first_name} #{i.last_name}" })	
+-%>
+	<script type="text/javascript">
+	
+	window.onload = function() {
+		var autoComplete;
+		var riders = eval(<%= names.to_json %>);
+		autoComplete = $("ul.first").autoCompletefb({urlLookup:riders});		
+		window.onsubmit = function(e) {
+			document.getElementById("riders_riders").value = autoComplete.getData();
+		}	
+	}
+	
+
+
+	</script>

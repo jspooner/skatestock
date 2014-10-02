@@ -1,0 +1,19 @@
+	<p><%= link_to 'add image', new_proof_path, :class => 'button' %></p>
+<div id="browse_app">
+	<div id="browse">
+		<% for proof in @proofs %>
+		  <% div_for proof, :class => proof.state do %>
+	
+			<%= link_to image_tag(proof.public_filename(:thumb)), edit_proof_path(proof) %>
+			<!-- , :onclick => 'javascript:showDetail(' + proof.id.to_s + ');'  -->
+			<br/>
+			<% if proof.state == "approved"  %>
+		   		<%= link_to "upload master",  new_user_proof_master_path(current_user, proof), :class => 'uploadmaster' %>
+		  <% elsif proof.state == "private" %>
+		  <% end %>
+				<%= proof.state %>
+		<% end %>
+		<% end %>
+	</div>
+<div id="detail"></div>
+</div>

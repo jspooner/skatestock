@@ -1,0 +1,2 @@
+module ProductUsePlacementsHelper
+end

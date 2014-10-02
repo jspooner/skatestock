@@ -1,0 +1,20 @@
+
+
+<% if @image_shell.stock %>
+	<%= image_tag( @image_shell.stock.image.url(:thumb) ) %>
+<% end %>
+
+<fieldset>
+	<legend>Sale Options <%= link_to "edit", edit_image_shell_path %></legend>
+	<ol>
+		<li>
+				<% if @stock_request == nil %>
+					<%= link_to "Stock Sale is off", edit_image_shell_path %>
+				<% else -%>
+					<%= @stock_request.message if @stock_request.action_needed?  %>
+					<%= @stock_request.approved? ? "Stock Sale - enabled" : "Pending Stock Sale"  %>
+				<% end -%>
+		</li>
+		
+	</ol>
+</fieldset>

@@ -1,0 +1,126 @@
+
+<h1>Rider Registration</h1>
+
+<div style="float:left;width:50%;margin-right:10px;">
+<fieldset>
+	<legend>Login</legend>
+	<p style="display:none">
+		<%= f.label :my_group, "I'm a" %>
+	<%= f.select :my_group, ["rider"] %></p>
+	<ul class="form">	
+		<li>
+			<%= f.label :login, "Login*" %>
+			<%= f.text_field :login %>
+		</li>
+		
+		<li><label for="email">Email*</label><br/>
+		<%= f.text_field :email %></li>
+
+		<li><label for="password">Password*</label><br/>
+		<%= f.password_field :password %></li>
+
+		<li><label for="password_confirmation">Confirm Password*</label><br/>
+		<%= f.password_field :password_confirmation %></li>
+	</ul>
+</fieldset>
+
+<fieldset>
+	<legend>Personal Profile</legend>
+	<ul class="form">
+		<li>
+			<%= f.label :first_name, "First name*" %>
+			<%= f.text_field :first_name %>
+		</li>
+		<li>
+			<%= f.label :last_name, "Last name*" %>
+			<%= f.text_field :last_name %>
+		</li>
+		<li style="display:none">
+			<%= f.label :job_title %>
+			<%= f.select :job_title, ["Select One", "Account Executive","Accounting","Art Buyer","Art Director","Author / Editor / Copywriter","Creative Director","Educator/Instructor","Graphic Designer","Marketing Communications","Photo Researcher","Photographer","Producer / Director","Production Management","Public Relations","Senior Management","Web Developer / Programmer" ] %>
+		</li>
+		<li style="display:none">
+			<%= f.label :company_name, "Company name*" %>
+			<%= f.text_field :company_name %>
+		</li>	
+		<li>
+			<%= f.label :phone, "Phone*" %>
+			<%= f.text_field :phone %>
+		</li>
+		<li>
+			<%= f.label :fax %>
+			<%= f.text_field :fax %>
+		</li>
+		<li style="display:none">
+			<%= f.label :company_type %>
+			<%= f.select :company_type, ["Select One","Ad Agency","Book Publisher","Corporate","Cultural Institution","Educational Institution","Freelance - Ad Agency/Graphic Design","Freelance - Book Publisher","Freelance - Corporate","Freelance - E-Media/Entertainment","Freelance - Magazine/Newspaper Publisher","Freelance - Nonprofit","Government","Graphic Design","Internet","Magazine Publisher","Marketing","Mobile","Newspaper Publisher","PR/Communications","Record Company","Religious Institution","RF Reseller","Service Bureau","TV/Film/Visual"] %>
+		</li>
+	</ul>
+</fieldset>
+</div>
+<div style="float:left;width:45%">
+	<fieldset>
+		<legend>Contact Information</legend>
+		<ul class="form">
+			<li>
+				<%= f.label :contact_address, "Address*" %>
+				<%= f.text_field :contact_address %>
+			</li>
+			<li>
+				<%= f.label :contact_city, "City*" %>
+				<%= f.text_field :contact_city %>
+			</li>
+			<li>
+				<%= f.label :contact_state, "State*" %>
+				<%= f.text_field :contact_state %>
+			</li>
+			<li>
+				<%= f.label :contact_zip, "Postal Code*" %>
+				<%= f.text_field :contact_zip %>
+			</li>
+		</ul>		
+	</fieldset>
+		
+	<fieldset style="display:none">
+		<legend>Billing Information</legend>
+		<%= check_box "same_as_billing", "na" %><%= label "same_as_billing", "na", "My contact information is the same as my billing address" %>
+		<ul class="form">
+			<li>
+				<%= f.label :billing_address, "Address*" %>
+				<%= f.text_field :billing_address %>
+			</li>
+			<li>
+				<%= f.label :billing_city, "City*" %>
+				<%= f.text_field :billing_city %>
+			</li>
+			<li>
+				<%= f.label :billing_state, "State*" %>
+				<%= f.text_field :billing_state %>
+			</li>
+			<li>
+				<%= f.label :billing_zip, "Postal Code*" %>
+				<%= f.text_field :billing_zip %>
+			</li>
+		</ul>
+	</fieldset>
+	
+	<fieldset id="model_release">
+		<legend>Model Release</legend>
+		<iframe src="/model_release.html" border="none" width="100%" height="200"></iframe>
+		
+		<p><%= f.label :agreed_to_model_release, "Do you agree?" %> <%= f.check_box :agreed_to_model_release %></p>
+		
+	</fieldset>
+
+</div>
+<div class="clear"></div>
+<fieldset>
+	<legend>Legal</legend>
+	<p>I have read and agree to the Shrelp <%= link_to "Terms of Service", about_path(:termsofuse) %>, and
+		 <%= link_to "#{@user.my_group.capitalize} Contract", about_path("#{@user.my_group}_contract") %>, and Shrelp <%= link_to "Privacy Policy", about_path(:privacy) %>, 
+		and to receive important communications from Shrelp! electronically.</p>
+	
+	<p><%= label :user, "agreed", "Do you agree?" %> <%= f.check_box :agreed %></p>
+	
+	<p><%= submit_tag 'Sign up' %></p>
+</fieldset>

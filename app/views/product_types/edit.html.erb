@@ -1,0 +1,23 @@
+<h1>Editing product_type</h1>
+
+<% form_for(@product_type) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :percentage %>
+		<%= f.text_field :percentage %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @product_type %> |
+<%= link_to 'Back', product_types_path %>

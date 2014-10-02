@@ -1,0 +1,28 @@
+<h1>Rider Invitations</h1>
+<p>Your photos will not be available for sale until the rider has signed a model release.</p>
+
+ <% form_tag(update_multiple_user_invitations_path, :method =>:put) do %>
+	<%= hidden_field_tag "image_shell_id", @image_shell_id %>
+  <% @invitation.each do |invitation| %>
+	<fieldset>
+		<legend><%= invitation.first_name %> <%= invitation.last_name %></legend>
+		<ul>
+			<li>
+				<label for="invitation_email[]">Email:</label><br/>
+				<%= hidden_field_tag "invitation_ids[]", invitation.id %>
+				<%= text_field_tag "invitation_email[]", invitation.email %>
+			</li>
+			<li>
+				<label for="invitation_phone[]">Phone:</label><br/>
+				<%= text_field_tag "invitation_phone[]", invitation.phone %>
+			</li>
+			<li>
+				<label for="invitation_url[]">URL:</label><br/>
+				<%= text_field_tag "invitation_url[]", invitation.url %>
+			</li>
+		</ul>
+	</fieldset>
+
+  <% end -%>
+	<%= submit_tag "Save" %>
+<% end -%>

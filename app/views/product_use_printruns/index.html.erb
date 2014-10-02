@@ -1,0 +1,20 @@
+<h1>Listing product_use_printruns</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for product_use_printrun in @product_use_printruns %>
+  <tr>
+		<td><%= product_use_printrun.name %></td>
+		<td><%= product_use_printrun.percentage %></td>
+		<td><%= product_use_printrun.price %></td>
+    <td><%= link_to 'Edit', edit_product_use_printrun_path(product_use_printrun) %></td>
+    <td><%= link_to 'Destroy', product_use_printrun, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New product_use_printrun', new_product_use_printrun_path %>

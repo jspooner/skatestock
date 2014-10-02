@@ -1,0 +1,11 @@
+<% title "Dashboard" %>
+<h3>Action Needed</h3>
+<table>
+<% for r in @action_needed -%>
+	<tr>
+		<td><%= image_tag r.original_image.image.url(:thumb), :height => 40 %></td>
+		<td><%= r.message %></td>
+		<td><%= link_to '<span class="action_required">action required</span>', image_shell_requests_path(r.image_shell) %></td>
+	</tr>
+<% end -%>
+</table>

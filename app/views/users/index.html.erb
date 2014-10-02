@@ -1,0 +1,6 @@
+
+<% if current_user.state == "root" || current_user.state == "admin"  %>
+	<%= render :partial => "admin_list" %>
+<% else %>
+	<%= render :partial => "public_list" %>
+<% end %>

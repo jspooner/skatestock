@@ -1,0 +1,27 @@
+<h1>Editing proof</h1>
+
+<% if current_user.my_group == "admin" %>
+	<p>
+		Type:  @proof.product_type 
+	</p>
+	<% form_for(@proof) do |f| %>
+	  <%= f.error_messages %>
+		<%= label 'state', 'pending' %>
+		<%= f.radio_button 'state', 'pending' %>
+
+		<%= label 'state', 'approved' %>
+		<%= f.radio_button 'state', 'approved' %>
+
+		<%= label 'state', 'denied' %>
+		<%= f.radio_button 'state', 'denied' %>
+
+	    <%= f.submit "Update" %>
+	<% end %>
+	<%= image_tag @proof.public_filename %>
+<% else %>
+	<%= render :partial => 'proofs/photographer_edit' %>
+<% end %>
+
+<p>
+<a href="javascript:window.history.back()">Back</a>
+</p>

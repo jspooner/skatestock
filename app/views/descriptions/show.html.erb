@@ -1,0 +1,68 @@
+
+
+<p>
+  <strong>Proof:</strong>
+  <%=h @description.proof_id %>
+</p>
+<p>
+  <strong>Master:</strong>
+  <%=h @description.master_id %>
+</p>
+<p>
+  <strong>Title:</strong>
+  <%=h @description.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @description.description %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%=h @description.location %>
+</p>
+<p>
+  <strong>Obsticle:</strong>
+  <%=h @description.obsticle %>
+</p>
+<p>
+  <strong>Trick:</strong>
+  <%=h @description.trick %>
+</p>
+<p>
+  <strong>Gender:</strong>
+  <%=h @description.gender %>
+</p>
+<p>
+  <strong>People:</strong>
+  <%=h @description.people %>
+</p>
+<p>
+  <strong>Portrait:</strong>
+  <%=h @description.portrait %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%=h @description.age %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%=h @description.color %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%=h @description.state %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%=h @description.city %>
+</p>
+<p>
+  <strong>Rider:</strong>
+  <%=h @description.rider_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_description_path(@description) %> |
+  <%= link_to "Destroy", @description, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", descriptions_path %>
+</p>

@@ -1,0 +1,2 @@
+<b><%= number_to_currency @line_item.calculate_price %></b>
+<%= hidden_field 'line_item', :price, :value => @line_item.price.to_s %>

@@ -1,0 +1,18 @@
+<h1>Pricing</h1>
+<ul>
+<% @price_usages.each do |u| %>
+	<li><%= u.name %>
+	<ul>
+	<% u.medias.each do |m| %>
+		<li>
+			<%= m['name'] %> - 
+			<%= number_to_currency m['min_price'] %> to 
+			<%= number_to_currency m['max_price'] %> 
+		</li>
+	<% end %>
+	</ul></li>
+<% end %>
+
+</ul>
+
+

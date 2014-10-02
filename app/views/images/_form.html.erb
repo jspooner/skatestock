@@ -1,0 +1,121 @@
+
+<% if @image.image_shell && @image.request %>
+	<h1>Upload modified image</h1>
+	<%= image_tag @image.image_shell.images.find_by_product_type('original').public_filename(:thumb)  %>
+	<p><strong><%= @image.request.request_type.capitalize %></strong> sale requires "<%= @image.request.message %>".</p>
+
+<% end %>
+
+<% form_for(@image, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+	<% if @image.filename %>
+		<%= image_tag @image.public_filename(:thumb) %>
+	<% else -%>
+		<p>
+			<label for="image">Upload Hi Res Image</label>
+			<%= f.file_field :uploaded_data %>
+			<%= f.hidden_field :user_id %>
+		</p>
+	<% end -%>
+<% if @image.image_shell == nil %>	
+	<fieldset>
+		<legend>$</legend>
+		<% if @image.product_type == "private" -%>
+			<%= f.label :base_price %>
+			<%= f.text_field :base_price %>
+		<% elsif @image.product_type == "offline" %>
+			<%= f.label :base_price %>
+			<%= f.text_field :base_price %>
+			<p>This image is set to private and can't sold.</p>
+		<% elsif @image.product_type == "editorial" %>
+		
+		<% elsif @image.product_type == "stock" %>
+			
+		<% end %>
+		
+		<p><b>Stock Photography</b> <br/>
+			<%= link_to 'Sell as Editorial or Stock', new_image_request_path(@image) %><br/>
+		</p>
+		<% if @image.request %>
+			<h3>Request</h3>
+			<% @image.request.each do |r| %>
+				<%= "Pending" unless r.approved? %> <%= r.request_type %> <br/>
+				<%= r.message if r.requires_action? %><br/>
+				<%= link_to "Upload revised image here", newimage_path(@image, r.id) %>
+			<% end %>
+		<% end %>		
+	</fieldset>
+<% else %>	
+	<a href="#" onclick="javascript:showImageDescription()" >update metadata</a>
+
+	<% fields_for "request", @image.request do |r_form| -%>
+			<%= r_form.hidden_field :request_id, :value => @image.request.id %>
+	<% end -%>
+	<% fields_for "image_shell", @image.image_shell do |i_form| -%>
+			<%= i_form.hidden_field :image_shell_id, :value => @image.image_shell.id %>
+	<% end -%>
+
+<% end %>	
+	
+	<fieldset id="metadata" style="display:<%= (@image.image_shell) ? "none" : "block" %>">
+		<legend>Metadata</legend>
+		<% prefixold = "image[description]" %>
+		<% prefix = "description" %>
+		<% fields_for prefix, @image.description do |description_form| -%>
+			<p>
+		    <%= description_form.label :title %><br />
+		    <%= description_form.text_field :title %>
+		  </p>
+			<p>
+		    <%= description_form.label :description %><br />
+		    <%= description_form.text_field :description %>
+		  </p>
+		  <p>
+		    <%= description_form.label :location %><br />
+		    <%= description_form.text_field :location %>
+		  </p>
+		  <p>
+		    <%= description_form.label :obsticle %><br />
+		    <%= description_form.text_field :obsticle %>
+		  </p>
+		  <p>
+		    <%= description_form.label :trick %><br />
+		    <%= description_form.text_field :trick %>
+		  </p>
+		  <p>
+		    <%= description_form.label :gender %><br />
+		    <%= description_form.text_field :gender %>
+		  </p>
+		  <p>
+		    <%= description_form.label :people %><br />
+		    <%= description_form.text_field :people %>
+		  </p>
+		  <p>
+		    <%= description_form.label :portrait %><br />
+		    <%= description_form.check_box :portrait %>
+		  </p>
+		  <p>
+		    <%= description_form.label :age %><br />
+		    <%= description_form.text_field :age %>
+		  </p>
+		  <p>
+		    <%= description_form.label :color %><br />
+		    <%= description_form.text_field :color %>
+		  </p>
+		  <p>
+		    <%= description_form.label :state %><br />
+		    <%= description_form.text_field :state %>
+		  </p>
+		  <p>
+		    <%= description_form.label :city %><br />
+		    <%= description_form.text_field :city %>
+		  </p>
+		<% end -%>
+	</fieldset>
+	
+  <p>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+

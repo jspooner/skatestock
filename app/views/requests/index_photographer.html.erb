@@ -1,0 +1,25 @@
+<h1>Modification Request</h1>
+<%= image_tag @image_shell.images.find_by_product_type('original').public_filename(:thumb) %>
+
+<ol>
+<% for r in @image_shell.requests -%>
+	<li>
+		
+		<!-- og: <%= image_tag r.original_image.public_filename(:thumb), :width => 30 %><br/>
+		updated_image: <%= image_tag r.updated_image.public_filename(:thumb), :width => 30 if r.updated_image %><br/> -->
+		
+	<% if r.state == "new" -%>
+		<p>We're still considering this image for <%= r.request_type %> sale.</p>
+	<% elsif r.state == "action_needed" -%>
+		<p><strong><%= r.request_type.capitalize %></strong> sale requires some modifications.</p> 
+		<quote><%= r.message %><br/>
+			<%= link_to '<span class="upload_new_photo_icon">upload_new_icon</span> upload modified image here', new_image_shell_image_path(:request_id => r.id), :class => "upload_img_btn" %>
+		</quote>
+	<% elsif r.state == "denied" -%>
+		<p><strong>Shrelp says:</strong> <%= r.message %></p>
+	<% elsif r.state == "approved" -%>
+		<p>Approved for <%= r.request_type %> sale.</p>
+	<% end -%>
+
+	</li>
+<% end -%>

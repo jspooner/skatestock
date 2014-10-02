@@ -1,0 +1,156 @@
+
+<div class="column"><h2>Stock</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @new_stock_requests %>
+    <tr class="<%= cycle :odd, :even %>">
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Responded</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @responded_stock_requests %>
+    <tr class="<%= cycle :odd, :even %>">
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Pending User</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @action_stock_requests %>
+    <tr class="<%= cycle :odd, :even %>">
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Denied</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @denied_stock_requests %>
+    <tr>
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+</div>
+
+<div class="column">
+<h2>Editorial</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @new_editorial_requests %>
+    <tr>
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Responded</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @responded_editorial_requests %>
+    <tr>
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Pending User</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @action_editorial_requests %>
+    <tr>
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<h2>Denied</h2>
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Message</th>
+    <th>Type</th>
+    <th>User</th>
+  </tr>
+  <% for request in @denied_editorial_requests %>
+    <tr>
+      <td><%= image_tag request.original_image.image.url(:thumb), :height => 50 if request.original_image %></td>
+      <td><%=h request.message %></td>
+      <td><%=h request.request_type %></td>
+      <td><%=h request.user.login %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+    </tr>
+  <% end %>
+</table>
+
+</div>

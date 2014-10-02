@@ -1,0 +1,21 @@
+<h1>Stock</h1>
+<div><% for image_shell in @stock -%>
+	<% div_for image_shell do -%>
+		<strong><%= image_shell.description.title %></strong><br/>
+		<%= image_tag( image_shell.stock.image.url(:thumb) )  %>
+		<% if current_user %>
+			<%= link_to 'Add to cart', "/calculator/" + image_shell.id.to_s + "/?KeepThis=true&TB_iframe=true&height=800&width=600", :class => "thickbox" %>
+		<% end %>
+	<% end -%>
+<% end -%><div class="clear"></div></div>
+
+<h1>Editorial</h1>
+<div><% for image_shell in @editorial -%>
+	<% div_for image_shell do -%>
+		<strong><%= image_shell.description.title %></strong><br/>
+		<%= image_tag( image_shell.editorial.image.url(:thumb) )  %>		
+		<% if current_user %>
+			<%= link_to 'Add to cart', "/calculator/" + image_shell.id.to_s + "/?KeepThis=true&TB_iframe=true&height=800&width=600", :class => "thickbox" %>
+		<% end %>
+	<% end -%>
+<% end -%><div class="clear"></div></div>

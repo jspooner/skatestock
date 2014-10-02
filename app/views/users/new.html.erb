@@ -1,0 +1,24 @@
+<%= error_messages_for :user %>
+<% title "Registration" %>
+<% form_for :user, :url => users_path do |f| -%>
+	<% if @user.my_group == "consumer" -%>
+		
+		<%= render :partial => 'new_consumer', :locals => {:f => f} %>
+		
+	<% elsif @user.my_group == "rider" -%>
+		
+		<%= render :partial => 'new_rider', :locals => {:f => f} %>
+		
+	<% elsif @user.my_group == "photographer" -%>
+	
+		<%= render :partial => 'new_photographer', :locals => {:f => f} %>
+		
+	<% else -%>
+		
+		<%= render :partial => 'new_select_type' %>
+
+	<% end -%>
+	
+<% end -%>
+
+

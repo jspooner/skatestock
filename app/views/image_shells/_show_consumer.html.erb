@@ -1,0 +1,57 @@
+<%= link_to( image_tag(@image_shell.images.find_by_product_type('original').image.url(:thumb)), 
+	@image_shell.images.find_by_product_type('original').image.url(:large), :target => "_blank" )%>
+
+<a href="javascript:void()" onclick="javascript:window.open('<%= "/calculator/" + @image_shell.id.to_s %>','calcWindow','800','800')" >Calculate Price</a>
+
+<p>
+  <strong>Title:</strong>
+  <%= @image_shell.description.title %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @image_shell.description.description %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%= @image_shell.description.location %>
+</p>
+<p>
+  <strong>Obsticle:</strong>
+  <%= @image_shell.description.obsticle %>
+</p>
+<p>
+  <strong>Trick:</strong>
+  <%= @image_shell.description.trick %>
+</p>
+<p>
+  <strong>Gender:</strong>
+  <%= @image_shell.description.gender %>
+</p>
+<p>
+  <strong>People:</strong>
+  <%= @image_shell.description.people %>
+</p>
+<p>
+  <strong>Portrait:</strong>
+  <%= @image_shell.description.portrait %>
+</p>
+<p>
+  <strong>Age:</strong>
+  <%= @image_shell.description.age %>
+</p>
+<p>
+  <strong>Color:</strong>
+  <%= @image_shell.description.color %>
+</p>
+<p>
+  <strong>State:</strong>
+  <%= @image_shell.description.state %>
+</p>
+<p>
+  <strong>City:</strong>
+  <%= @image_shell.description.city %>
+</p>
+
+
+
+

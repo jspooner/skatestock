@@ -1,0 +1,9 @@
+<% if !@user.image_shells.blank? %>
+  <% for image_shell in @user.image_shells %>
+		<% div_for(image_shell) do %>
+			<%= image_shell.description.title %><br/>
+			<%= link_to(image_tag(image_shell.original.public_filename(:thumb),:height => 110),i_path(image_shell))  %><br/>			
+		<% end %>
+  <% end %>
+<% else %>
+<% end %>

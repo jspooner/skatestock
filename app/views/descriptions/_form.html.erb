@@ -1,0 +1,58 @@
+
+<%= error_messages_for :description %>
+<%= image_tag @image_shell.images.find_by_product_type('original').public_filename(:thumb) %>
+<% form_for @description do |f| %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.label :obsticle %><br />
+    <%= f.text_field :obsticle %>
+  </p>
+  <p>
+    <%= f.label :trick %><br />
+    <%= f.text_field :trick %>
+  </p>
+  <p>
+    <%= f.label :gender %><br />
+    <%= f.text_field :gender %>
+  </p>
+  <p>
+    <%= f.label :people %><br />
+    <%= f.text_field :people %>
+  </p>
+  <p>
+    <%= f.label :portrait %><br />
+    <%= f.check_box :portrait %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </p>
+  <p>
+    <%= f.label :state %><br />
+    <%= f.text_field :state %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :rider_id %><br />
+    <%= f.text_field :rider_id %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

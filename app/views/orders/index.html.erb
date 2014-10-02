@@ -1,0 +1,23 @@
+<h1>Orders</h1>
+<table>
+
+</table>
+<table>
+	<tr>
+		<th>Invoice</th>
+		<th>User</th>
+		<th>IPN</th>
+		<th>Purchase Date</th>
+		<th>Amount</th>
+		<th>Status</th>
+	</tr>
+	<% for cart in @carts -%>
+	<tr>
+		<td><%= cart.id %></td>
+		<td><%= cart.user.login %></td>
+		<td><%= link_to cart.payment_notifications.length.to_s + ' view', orders_path + "/" + cart.id.to_s %></td>
+		<td><%= cart.purchased_at %></td>
+		<td><%= number_to_currency cart.total_price %></td>
+	</tr>
+	<% end -%>
+</table>

@@ -1,0 +1,5 @@
+	<% for master in @masters -%>
+		<% div_for master, :class => master.state do -%>
+			<%= image_tag(master.public_filename(:thumb)) %>
+		<% end -%>
+	<% end -%>

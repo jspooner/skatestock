@@ -1,0 +1,83 @@
+<h1>Editing master</h1>
+
+<h4>Proof</h4>
+<%= image_tag @master.proof.public_filename(:thumb) %>
+<h4>Master</h4>
+<%= image_tag @master.public_filename(:thumb) %>
+
+<% form_for( @master, :html => { :multipart => true }) do |f| -%>
+	<%= f.error_messages %>
+	<% if current_user.my_group == 'admin' -%>
+	<p>
+		<%= label 'state', 'pending' %>
+		<%= f.radio_button 'state', 'pending' %>
+
+		<%= label 'state', 'active' %>
+		<%= f.radio_button 'state', 'active' %>
+
+		<%= label 'state', 'sold' %>
+		<%= f.radio_button 'state', 'sold' %>
+	</p>
+	<% end -%>
+	<p>
+		<label for="master">Upload Hi Res Image</label>
+		<%= f.file_field :uploaded_data %>
+		<%= f.hidden_field :proof_id %>
+		<%= f.hidden_field :user_id %>
+	</p>
+
+	<p>
+		<%= label_tag :country, "Country"  %>
+		<%= country_select :country_select, [], {"United States" => :selected} %>
+	</p>
+
+	<p>
+		<%= label_tag :stateprovidence, "State / Providence"  %>
+		<%= f.text_field :stateprovidence %>
+	</p>
+
+	<p>
+		<%= label_tag :location, "Location"  %>
+		<%= f.text_field :location %>
+	</p>
+	
+	<p>
+		<%= label_tag :obstacle, "Obstacle"  %>
+		<%= f.text_field :obstacle %>
+	</p>
+
+	<p>
+		<%= label_tag :trick, "Trick"  %>
+		<%= f.text_field :trick %>
+	</p>
+
+	<p>
+		<%= label_tag :overall_color, "Overall Color"  %>
+		<%= f.text_field :overall_color %>
+	</p>
+
+	<p>
+		<%= label_tag :age_group, "Age Group"  %>
+		<%= f.text_field :age_group %>
+	</p>
+
+	<p>
+		<%= label_tag :gender, "Gender"  %>
+		<%= f.text_field :gender %>
+	</p>
+
+	<p>
+		<%= label_tag :number_of_people, "Number of People"  %>
+		<%= f.text_field :number_of_people %>
+	</p>
+
+	<p>
+		<%= label_tag :portrait, "Portrait"  %>
+		<%= f.check_box :portrait %>
+		
+	</p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end -%>

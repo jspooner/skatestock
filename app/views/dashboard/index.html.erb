@@ -1,0 +1,8 @@
+<h1>Dashboard</h1>
+
+<% if current_user.my_group == "admin" %>
+
+<% elsif current_user.my_group == "photographer" %>
+	<%= render :partial => 'photographerDashboard' %>
+	
+<% end %>

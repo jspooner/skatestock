@@ -1,0 +1,50 @@
+<h1>My Cart</h1>
+<table>
+	<tr>
+		<th></th>
+		<th>Start Date</th>
+		<th>Use Industry</th>
+		<th>Use Territory</th>
+		<th>Sensitive Subject</th>
+		<th>Usage</th>
+		<th>Media</th>
+		<th>Options</th>
+		<th>price</th>
+	</tr>
+
+<% for i in @cart.line_items -%>
+	<tr class="<%= cycle :odd, :even %>">
+
+		<td><%= image_tag i.image_shell.original.image.url(:thumb), :width => '50px' %><br/>#<%= i.image_shell.id %></td>
+		<td><%= i.use_duration_start %></td>
+		<td><%= i.use_industry %></td>
+		<td><%= i.use_territory %></td>
+		<td><%= i.sensitiveSubject %></td>
+		<td><%= i.price_usage.name %></td>
+		<td><%= i.price_media.name %></td>
+		<td>
+			<% i.price_options.each do |o| %>
+				<%= o.option %>: <%= o.name %><br/>
+			<% end %>
+		</td>
+		<td><%= number_to_currency(i.price) %></td>
+		<td><%= link_to 'remove', i, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+<% end -%>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td><strong>Total: US <%= number_to_currency @cart.total_price %></strong></td>
+	</tr>
+</table>
+<% form_tag APP_CONFIG[:paypal_url] do %>
+  <%= hidden_field_tag :cmd, "_s-xclick" %>
+  <%= hidden_field_tag :encrypted, @cart.paypal_encrypted(thankyou_path, payment_notifications_url(:secret => APP_CONFIG[:paypal_secret]) ) %>
+  <p><%= submit_tag "Checkout" %></p>
+<% end %><br/>

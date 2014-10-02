@@ -1,0 +1,35 @@
+<% content_for :title do %>Rider Invitations<% end %>
+
+<h1>Listing Invitations</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Url</th>
+		<th>Invited by</th>
+  </tr>
+
+<% for invitation in @invitations %>
+  <tr>
+    <td><%=h invitation.first_name %></td>
+    <td><%=h invitation.last_name %></td>
+    <td><%= link_to 'Add Email', "/users/#{current_user.id}/invitations/#{invitation.permalink}/edit/?e=1" if invitation.email != " " %></td>
+    <td><%= link_to 'Add Phone', "/users/#{current_user.id}/invitations/#{invitation.permalink}/edit/?e=2" if invitation.phone != " " %></td>
+    <td><%= link_to 'Add URL', "/users/#{current_user.id}/invitations/#{invitation.permalink}/edit/?e=3" if invitation.url != " " %></td>
+
+		<td><%= invitation.users.collect {|p| p.login} %></td>
+    <% if current_user.is_admin -%>
+	  <td><%= link_to 'Show', user_invitation_path_secure(current_user,invitation) %></td>
+    <td><%= link_to 'Edit', edit_user_invitation_path_secure(current_user,invitation) %></td>	
+    <td><%= link_to 'Destroy', user_invitation_path_secure(current_user,invitation), :confirm => 'Are you sure?', :method => :delete %></td>
+		<% end -%>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New invitation', new_user_invitation_path %>

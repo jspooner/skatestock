@@ -1,0 +1,41 @@
+--- 
+price_option_names_006: 
+  name: Location
+  updated_at: 2008-12-31 07:29:14
+  id: "7"
+  created_at: 2008-12-31 07:29:14
+price_option_names_007: 
+  name: Tv Households
+  updated_at: 2009-05-18 05:07:19
+  id: "8"
+  created_at: 2009-05-18 05:07:19
+price_option_names_008: 
+  name: Episodes
+  updated_at: 2009-05-18 05:56:30
+  id: "9"
+  created_at: 2009-05-18 05:56:30
+price_option_names_001: 
+  name: Size
+  updated_at: 2008-12-31 07:07:10
+  id: "1"
+  created_at: 2008-12-31 07:07:10
+price_option_names_002: 
+  name: Duration
+  updated_at: 2008-12-31 07:07:24
+  id: "2"
+  created_at: 2008-12-31 07:07:24
+price_option_names_003: 
+  name: Print Run
+  updated_at: 2009-05-18 05:04:51
+  id: "3"
+  created_at: 2008-12-31 07:09:35
+price_option_names_004: 
+  name: Placement
+  updated_at: 2008-12-31 07:09:36
+  id: "4"
+  created_at: 2008-12-31 07:09:36
+price_option_names_005: 
+  name: Exposure
+  updated_at: 2008-12-31 07:21:37
+  id: "6"
+  created_at: 2008-12-31 07:21:37

@@ -1,0 +1,29 @@
+
+<p><%= link_to '<span class="upload_new_image">upload_new_image</span> UPLOAD IMAGE', new_image_shell_path, :class => "add_btn" %></p>
+
+<% for image in @image_shells %>
+
+	<% div_for image, :class => "" do %>		
+		<strong><%= image.description.title %></strong><br/>
+		
+		<%= link_to(image_tag(image.original.image.url(:thumb)), edit_image_shell_path(image)) if image.original %>
+
+		<% if image.requires_photographer_action %>
+			<%= link_to '<br/><span class="action_required">action required</span>', edit_image_shell_path(image) %>
+		<% end %>
+		<%= image_shell_state(image.requests) %><br/>
+	<% end %>
+<% end %>
+
+<% if @image_shells.length == 0 %>
+<div class="message">
+	<p>	Welcome <%= current_user.login.capitalize %>,<br/>
+	Here's how to get started.
+	</p>
+	<ol>
+		<li>Upload Images</li>
+		<li>Wait for Shrelp! to approve them or request modifications.</li>
+		<li>That's it, your images are for sale.</li>
+	</ol>
+</div>
+<% end %>

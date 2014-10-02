@@ -1,0 +1,19 @@
+<h1>Editing price_usage</h1>
+
+<% form_for(@price_usage) do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @price_usage %> |
+<%= link_to 'Back', price_usages_path %>

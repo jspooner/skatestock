@@ -1,0 +1,8 @@
+<h1>Users</h1>
+
+<% for u in @users %>
+	<% div_for u do %>
+		<%= link_to u.login, user_path(u) %> - <%= u.state %> - <%= link_to 'edit', edit_user_path(u) %>
+	<% end %>
+<% end %>
+

@@ -1,0 +1,27 @@
+--- 
+image_shells_001: 
+  updated_at: 2009-06-16 04:00:46
+  private_base_price: "0"
+  description_id: "41"
+  original_id: "68"
+  private_sale: "0"
+  stock_base_price: "0"
+  id: "41"
+  editorial_id: 
+  stock_id: 
+  editorial_base_price: "0"
+  user_id: "5"
+  created_at: 2009-06-16 04:00:46
+image_shells_002: 
+  updated_at: 2009-06-16 04:03:47
+  private_base_price: "0"
+  description_id: "42"
+  original_id: "69"
+  private_sale: "0"
+  stock_base_price: "0"
+  id: "42"
+  editorial_id: 
+  stock_id: 
+  editorial_base_price: "0"
+  user_id: "5"
+  created_at: 2009-06-16 04:03:47

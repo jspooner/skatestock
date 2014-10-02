@@ -1,0 +1,218 @@
+
+<h1>Right Managed Image</h1>
+<p>
+	<%= image_tag @image_shell.original.image.url(:thumb) %><br/>
+	#<%= @image_shell.id.to_s %>
+</p>
+
+<h3>Set Usage</h3>
+<% form_for(@line_item) do |f| %>
+  <%= f.error_messages %>
+<%= hidden_field 'line_item', :image_shell, :value => @image_shell.id.to_s %>
+<p>
+	<label for="line_item_use_sensitiveSubject">Sensitive subjects:</label>
+	<select id="line_item_use_sensitiveSubject" name="line_item[sensitiveSubject]">
+		<option value="0" selected="selected">None</option>
+		<option value="1">Abortion</option>
+		<option value="2">Addiction</option>
+		<option value="3">Alcohol</option>
+		<option value="4">Cancer</option>
+		<option value="5">Child Abuse</option>
+		<option value="6">Cosmetic Surgery</option>
+		<option value="7">Disease</option>
+		<option value="8">Drug Abuse</option>
+		<option value="9">HIV/AIDS</option>
+		<option value="10">Homelessness</option>
+		<option value="11">Homosexuality</option>
+		<option value="12">Impotence</option>
+		<option value="13">Incontinence</option>
+		<option value="14">Mental Health</option>
+		<option value="21">Other</option>
+		<option value="15">Poverty</option>
+		<option value="16">Racism</option>
+		<option value="17">Sexualy Transmitted Diseases</option>
+		<option value="18">Suicide</option>
+		<option value="19">Tobacco</option>
+		<option value="20">Violence</option>
+	</select>
+</p>
+<p>
+	<label for="line_item">Select a Usage:</label>
+	<%= select 'line_item','price_usage', [["Select One",-1]] + @price_usages.collect { |o| [o.name,o.id] } , {}, {:onchange => "javascript:onUsageChange()"} %>
+	<div id="useTypes"></div>
+	<div id="useOptions"></div>
+	<div id="price"></div>
+	<div id="result"></div>
+</p>
+<% end %>
+<%
+if @image_shell.stock == nil && @image_shell.editorial
+	edititorial_only = 1
+else
+	edititorial_only = 0
+end
+%>
+<script type="text/javascript">
+
+function hideIfEmpty(e)
+{
+	if (e.attr("options").length == 0)
+	{
+		// console.log("HIDE " + e)
+	}
+}
+
+var usage = "line_item_price_usage";
+var media = "line_item_price_media";
+var numOptions;
+
+function onUsageChange()
+{
+	var selectedIndex = document.getElementById(usage).selectedIndex;
+	var selectedValue = document.getElementById(usage)[selectedIndex].value;
+	if(selectedValue==-1)
+	{
+		$("#useTypes").children().remove();
+		$("#useOptions").children().remove();
+		$("#price").innerHTML      = "";
+		 return false;
+	}
+
+	$.ajax({
+	  url: '/calculator/getUseTypes/' + selectedValue + '/?editorialonly=<%= edititorial_only %>',
+	  cache: false,
+	  success: function(html){
+	    $("#useTypes").children().remove();
+			$("#useOptions").children().remove();
+			$("#price").children().remove();
+			$("#useTypes").append(html);
+			$("#line_item_submit").remove();
+	  },
+		error: function(){
+			alert("Oops! Something broke.");
+		}
+	});
+
+}
+
+function onTypeChange()
+{
+	var owner         = document.getElementById(usage)[document.getElementById(usage).selectedIndex].value;
+	var selectedIndex = document.getElementById(media).selectedIndex;
+	var selectedValue = document.getElementById(media)[selectedIndex].value;
+	if(selectedValue==-1)
+	{
+		$("#useOptions").innerHTML = "";
+		$("#price").innerHTML      = "";
+		 return false;
+	}
+	
+	$.ajax({
+		url: escape('/calculator/getUseOptions/' + selectedValue + "/" + owner),
+		cache: false,
+		success: function (html){
+			$("#useOptions").children().remove();
+			$("#price").children().remove();
+			$("#useOptions").append(html);
+			$("#line_item_use_territory").change(function()
+				{
+					$("#price").children().remove();
+					$("#line_item_submit").remove();
+				});
+				
+				
+			// hide if empty
+			var options = $("#useOptions select");
+			for(var i = 0; i < options.length; i++)
+			{
+				if(options[i].id.indexOf("options_") != -1)
+				{
+					if(options[i].options && options[i].options.length == 0)
+					{
+						$(options[i].parentNode).css("display","none");
+					}
+				}
+			}
+		}
+	});
+}
+
+function calculatePrice()
+{
+	var select = document.getElementsByTagName("select");
+	var o = []
+	for( var i=0; i < select.length; i++)
+	{
+		if(select[i].name.indexOf("options_") != -1 )
+		{
+			// alert(select[i].name + "=" + select[i].value);
+			if(select[i].value != "")
+			{
+				o.push(select[i].value);
+			}
+		}
+	}
+	var options = document.getElementById("line_item_price_options").value = o;
+	
+	$.ajax({
+		url: '/calculator/calculate_price/<%= @image_shell.id.to_s %>/?' + $("#new_line_item").serialize(),
+		cache: false,
+		success: function (html){
+			$("#price").children().remove();
+			$("#price").append(html);
+			
+			if( document.getElementById("line_item_submit") == null)
+			{
+				var submit  = document.createElement('input');
+				submit.setAttribute("type","button");
+				submit.setAttribute("name","commit");
+				submit.setAttribute("id","line_item_submit");
+				submit.setAttribute("value","Add to cart");			 
+				submit.setAttribute("onclick","javascript:submitCart()");			
+				document.getElementById("new_line_item").appendChild(submit);					
+			}
+			
+		},
+		error: function (error){
+			alert("Oops! Something went wrong.")
+		}
+	});
+}
+
+function onOptionChange()
+{
+	$("#price").children().remove();
+	$("#line_item_submit").remove();
+}
+
+function submitCart()
+{
+	
+	$.ajax({
+		url: '/calculator/add_to_cart/<%= @image_shell.id.to_s %>/?' + $("#new_line_item").serialize(),
+		cache: false,
+		success: function (transport){
+			var response = transport.responseText || "no response text";
+			$("result").append(response);
+			window.close();
+			window.parent.SHRELP.updateCart();
+			self.parent.tb_remove()
+		}
+	});
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

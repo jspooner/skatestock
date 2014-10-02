@@ -1,0 +1,26 @@
+development:
+  paypal_email: 
+  paypal_secret: 
+  paypal_cert_id: 
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  invoice_system: "_dev"
+  domain: "http://localhost:3000"
+  info_email: 
+  
+test:
+  paypal_email: 
+  paypal_secret: 
+  paypal_cert_id: 
+  paypal_url: testpaypalurl
+  invoice_system: "_test"
+  domain: "http:localhost:3000"
+  info_email: "info@shrelp.com"
+      
+production:
+  paypal_email: 
+  paypal_secret: 
+  paypal_cert_id: 
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  invoice_system: 
+  domain: 
+  info_email: 
