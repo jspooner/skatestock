@@ -1,9 +1,13 @@
 # Shrelp Stock Photography
 
-Shrep was a start up we tried around 2006 that tried to help skateboard photographers sell their photos.
+Back in 2009 I tried to open a boutique stock photography agency that specializes in licensing skateboard photographs. Here are all the business documents and source code to the website.
 
-We are a boutique stock photography agency that specializes in licensing skateboard photographs around the world. 
-We distribute high quality skateboard photographs from talented skateboard photographers for advertisements, editorial, and many other purposes. Shrelp! stringently collects only the best skateboard photographs for stock.
+ * [Stock Photography Pricing](https://github.com/jspooner/skatestock/blob/master/doc/pricing%20research.xlsx)
+ * [About Shrelp](https://github.com/jspooner/skatestock/blob/master/doc/About%20Shrelp.pdf)
+ * [Services](https://github.com/jspooner/skatestock/blob/master/doc/Internal_%20Services%20Plan.pdf)
+ * [Services Public](https://github.com/jspooner/skatestock/blob/master/doc/Shrelp%20Services.pdf)
+ * [Website Copy](https://github.com/jspooner/skatestock/blob/master/doc/Shrelp!%20Content%20Deck.pdf)
+
 
 ![Browse Photos](https://raw.githubusercontent.com/jspooner/skatestock/master/doc/shrelp_index2.png)
 
